@@ -1,0 +1,28 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/io.continis.hats/UI/Styles.uss?fileID=7433441132597879392&amp;guid=1ea6eb028325c41a7af66d867b63eef9&amp;type=3#Styles" />
+    <engine:VisualElement name="Container" style="flex-grow: 1;">
+        <engine:Label text="Hats" name="Title" />
+        <engine:ScrollView name="MainScrollView">
+            <engine:Label text="Workspaces" class="subtitle" />
+            <Hats.Editor.UIElements.MiniHelpBox text="Workspaces can be used to customise the way Unity appears to you. They are personal." message-type="Info" />
+            <engine:VisualElement name="CurrentPersona" class="unity-base-field" style="flex-direction: row; align-items: center;">
+                <engine:Label text="Active Workspace" tooltip="The currently active Workspace. Use the switcher UI to change it." class="unity-base-field__label" />
+                <Hats.Editor.UIElements.WorkspaceSwitcherUI />
+            </engine:VisualElement>
+            <engine:Toggle label="Display In Toolbar" name="DisplayInToolbarToggle" value="true" tooltip="Displays the Workspace switcher UI in the Editor Toolbar, for easy access. If this option is disabled, the switcher can still be accessed either from this window, or by opening dedicated window (Window &gt; Hats &gt; Workspace Switcher Window)." />
+            <engine:DropdownField label="Switcher Style" name="SwitcherType" tooltip="Allows to choose which style of Workspace-switcher UI to display." index="0" choices="Dropdown,Buttons with Icons" class="unity-base-field__inspector-field" />
+            <engine:ListView name="PersonalWorkspaces" header-title="Personal Workspaces" show-add-remove-footer="true" reorder-mode="Animated" reorderable="true" show-border="true" show-foldout-header="true" selection-type="Single" show-alternating-row-backgrounds="ContentOnly" view-data-key="PersonalWorkspacesList" />
+            <engine:VisualElement name="Spacer" style="height: 20px;" />
+            <engine:Label text="Teams" class="subtitle" />
+            <Hats.Editor.UIElements.MiniHelpBox text="Each Team has a base Workspace, automatically activated for all its members. Personal Workspaces can add extra rules on top of Team Workspaces. Teams are shared." message-type="Info" />
+            <engine:VisualElement class="unity-base-field" style="flex-direction: row; align-items: center;">
+                <engine:Label text="Your Team" enable-rich-text="false" emoji-fallback-support="false" tooltip="The Team you&apos;re currently part of." class="unity-base-field__label" />
+                <engine:VisualElement name="TeamMiniIcon" />
+                <engine:Label text="No Team" name="ActiveTeamLabel" class="unity-base-field__input" style="flex-grow: 1;" />
+                <engine:Button text="Leave" name="ActiveTeamButton" enabled="false" style="flex-grow: 0; flex-shrink: 1;" />
+            </engine:VisualElement>
+            <editor:ObjectField label="Teams" enabled="false" allow-scene-objects="false" type="Hats.Editor.TeamsCatalog, Hats.Editor" name="IndexObjectField" tooltip="The ScriptableObject containing the list of available Teams." class="unity-base-field__inspector-field" style="margin-bottom: 3px;" />
+            <engine:VisualElement name="FinalSpacer" style="height: 50px; flex-grow: 1;" />
+        </engine:ScrollView>
+    </engine:VisualElement>
+</engine:UXML>

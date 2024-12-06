@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 325cddc1e65f47ca9e6c1d3e8ed88a71
+timeCreated: 1731520534
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/CustomEditors/WorkspaceEditor.cs
+  uploadId: 711627

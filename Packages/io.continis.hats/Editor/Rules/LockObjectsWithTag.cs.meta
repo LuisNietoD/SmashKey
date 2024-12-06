@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 928794cf2dd740dcbe80b1a7ea6d77a3
+timeCreated: 1729327757
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/Rules/LockObjectsWithTag.cs
+  uploadId: 711627

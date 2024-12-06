@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 2a54d69a5c3644e4ad70c4902fe13571
+timeCreated: 1728075948
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/UIElements/TeamPickerDropdown.cs
+  uploadId: 711627

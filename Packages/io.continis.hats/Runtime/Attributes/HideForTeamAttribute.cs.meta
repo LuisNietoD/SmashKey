@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: f606a8043296428dbd4a20a9351047a2
+timeCreated: 1729292142
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Runtime/Attributes/HideForTeamAttribute.cs
+  uploadId: 711627

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 3266c7f527174d288716b8d37913ba44
+timeCreated: 1729292734
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Runtime/Attributes/DisplayOnlyForTeamAttribute.cs
+  uploadId: 711627

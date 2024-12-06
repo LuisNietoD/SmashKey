@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8ad48df8ee4cb48a5b97facfce86458e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Presets/DefaultWorkspace.asset
+  uploadId: 711627

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b5aeb90b1b6df421ab0ad51afab1d973
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Samples~/CustomTeamBasedInspector/TeamBasedExample.prefab
+  uploadId: 711627

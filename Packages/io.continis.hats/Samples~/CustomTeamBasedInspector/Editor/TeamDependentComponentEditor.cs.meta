@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: fa9dbf37bd8614621892068d1afeef57
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _programmerTeam: {fileID: 8131059415035727026, guid: 4fba16a13294645b3b1b61c641d4be3b,
+      type: 2}
+  - _artistTeam: {fileID: 7098131264117519705, guid: 4fba16a13294645b3b1b61c641d4be3b,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Samples~/CustomTeamBasedInspector/Editor/TeamDependentComponentEditor.cs
+  uploadId: 711627

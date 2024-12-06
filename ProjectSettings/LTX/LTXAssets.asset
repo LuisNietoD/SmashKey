@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 53
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7662139ab00a4bf5b2b197798bc0abe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foldersData:
+  - annotation:
+      annotation: "Dossier contenant les scripts principaux du projet.\nEtapes :
+        \n\n1/ A l'interieur, cr\xE9ez un dossier par <i>\"Mode de jeu\"/\"Phase
+        de jeu\".\n</i>\nExemple dans Mario on aurait un dossier :\n- <b>WorldMap</b>\n-
+        <b>InGame</b>\n\n2/ Cr\xE9ez un dossier <b>Core</b> qui lui contiendra les
+        classes communes a TOUT le projet.\nSouvent, Core contient surtout des classes
+        representant des donn\xE9es et tr\xE8s peu de logique.\n\n3/ Cr\xE9ez un
+        dossier <b>Editor</b> qui lui contiendra les outils globaux de votre projet.\n\n4/Dans
+        chaque dossier, cr\xE9ez une assembly ref\xE9rencant core et les autre d\xE9pendances.
+        Pour le dossier <b>Editor</b>, assurez vous de cocher uniquement la case
+        Editeur pour qu'il ne soit pas inclus dans le build.\n<i>A noter : Le dossier
+        Editor est le seul \xE0 pouvoir r\xE9f\xE9rencer l'entieret\xE9e du projet
+        mais ne dois JAMAIS \xEAtre r\xE9f\xE9renc\xE9</i> \n\n\n<b>Pourquoi le faire?</b>\nCette
+        structuration force une certaine propret\xE9 de code et oblige a reflechir
+        a l'architecture du projet puisque les d\xE9pendences circulaires sont impossibles.\nAussi,
+        cette structuration permettera d'utiliser le modificateur  \"internal\" tr\xE8s
+        pratique pour proteger votre code.\nDernier + : Les assemblies permettent
+        d'avoir des namespaces par d\xE9faut.\n\n\n<b>Exemple </b>\n\n->Scripts\n---->Editor 
+        (<i>Assembly : NomDuJeu.Editor</i>)\n---->Core  (<i>Assembly : NomDuJeu.Core</i>)\n-------->Save
+        System\n-------->Progression\n-------->WeaponsData\n-------->PlayerInfos\n-------->Settings\n--------><color=Cyan>GameController.cs</color>\n-------->Etc...\n---->InGame
+        (<i>Assembly : NomDuJeu.InGame</i>)\n-------->Player\n------------->Animations\n------------->Controls\n------------->Attacks\n-------->Pathfinding\n-------->Levels\n-------------><color=Cyan>LevelManager.cs</color>\n-------->HUD\n-------->Etc....\n---->Shop
+        (<i>Assembly : NomDuJeu.Shop</i>)\n-------->UI\n-------->UpgradableItems\n-------->OnlineEvents\n-------->Etc..."
+      fontSize: 20
+    path: Assets/Scripts
+  - annotation:
+      annotation: "Dossier contenant des fichiers particuliers a charger manuellement
+        lors du runtime.\n\nPeut contenir les settings, des vid\xE9os, etc...\n\nAttention,
+        les fichiers dedans se retrouvent TEL QUEL dans le build.\n\nPour plus d'informations
+        :\nhttps://docs.unity3d.com/Manual/SpecialFolders.html"
+      fontSize: 20
+    path: Assets/StreamingAssets
+  - annotation:
+      annotation: "<b>ATTENTION : CHANGER LE NOM DU FICHIER POUR QU'IL MATCH LA PROPRI\xC9T\xC9
+        NAME ET AJUSTER LE NAMESPACE EN FONCTION DE VOTRE JEU </b>"
+      fontSize: 15
+    path: Assets/Scripts/Core/NomDuJeu.Core.asmdef
+  - annotation:
+      annotation: "<b>ATTENTION : CHANGER LE NOM DU FICHIER POUR QU'IL MATCH LA PROPRI\xC9T\xC9
+        NAME ET AJUSTER LE NAMESPACE EN FONCTION DE VOTRE JEU </b>"
+      fontSize: 15
+    path: Assets/Scripts/Editor/NomDuJeu.Editor.asmdef
+  - annotation:
+      annotation: "Contient les scenes du projet.\n\nIl faut bien hierarchiser vos
+        dossier en fonction de leur \"famille\".\nExemple de familles :\n- Levels\n-
+        Menus\n- Loading\n\nChaque scene doit avoir son propre dossier en parent
+        (<i>cf Exemple</i>)\nCe m\xEAme dossier peut alors comprendre des dossiers
+        reproduisant la structure du projet pour tout ce qui sera ULTRA SPECIFIQUE
+        \xE0 la sc\xE8ne et qui demandera rarement \xE0 \xEAtre \"maintenu\".\n\nExemple
+        : \nDans le cas de la sc\xE8ne <b>MainMenu</b> il faudra tr\xE8s surement
+        plein de scripts assez uniques et des animations/sprites uniques aussi.\n\n<i>A
+        noter : Ici, pas d'assembly. Ainsi, les scripts sp\xE9cifiques auront acc\xE8s
+        a l'entieret\xE9 du projet sans se soucier de d\xE9pendances circulaires.
+        </i>"
+      fontSize: 20
+    path: Assets/Scenes
+  - annotation:
+      annotation: "cf : <i>https://docs.unity3d.com/Manual/SpecialFolders.html</i>\n\nDossier
+        particulier permettant d'avoir des ressources qu'on peut charger dynamiquement
+        par leur chemin plut\xF4t que par une r\xE9f\xE9rence.\n\nTr\xE8s utiles
+        avec des ScriptableObjects\n\nEndroit PARFAIT pour avoir ses GameMetrics"
+      fontSize: 20
+    path: Assets/Resources
+  - annotation:
+      annotation: "Post Processing non li\xE9 \xE0 des scenes mais plut\xF4t \xE0
+        des contextes"
+      fontSize: 15
+    path: Assets/Project/Settings/PostProcessing
+  - annotation:
+      annotation: Ultra/High/Medium/Low/etc....
+      fontSize: 15
+    path: Assets/Project/Settings/URP/Qualities
+  - annotation:
+      annotation: Normalement un seul renderer suffit mais s'il vous en faut plus,
+        c'est ici qu'il faut les mettres
+      fontSize: 15
+    path: Assets/Project/Settings/URP/Renderers
+  - annotation:
+      annotation: "Prefabs du jeu.\nPas de recette magique pour l'architecture int\xE9rieure,
+        chaque philosophie \xE0 ses points positifs et n\xE9gatifs. Essayer de faire
+        au plus simple et surtout de vous y tenir.\n"
+      fontSize: 15
+    path: Assets/Project/Prefabs
+  - annotation:
+      annotation: "Le coeur du projet.\n\nDossier contenant TOUT les assets sp\xE9cifiques
+        au projets.\nIci, c'est comment sera organis\xE9 CHAQUE sous dossiers qui
+        fera de votre projet un projet organis\xE9, facile \xE0 trier et \xE0 explorer.\n\n<b>R\xE9guli\xE8rement,
+        enlevez tout ce que vous n'utilisez plus.</b>"
+      fontSize: 20
+    path: Assets/Project
+  - annotation:
+      annotation: "Certains assets de l'AssetStore demandent d'\xEAtre mis dans un
+        dossier Plugins.\n\nPour plus d'infos : \n\nhttps://docs.unity3d.com/Manual/ScriptCompileOrderFolders.html"
+      fontSize: 20
+    path: Assets/Plugins
+  - annotation:
+      annotation: "Endroit parfait pour tout les assets que vous achetez sur le store
+        etc...\n\n\nJe vous en est mis quelques-uns tr\xE8s pratiques!"
+      fontSize: 20
+    path: Assets/Extensions
+  - annotation:
+      annotation: "Tr\xE8s sp\xE9cifiques, vous pouvez l'ignorer.\n\nCe dossier permet
+        de charger des assets en EDITEUR. C'est comme le dossier Resources mais avec
+        la garanti qu'il ne serapas dans le build.\n\nPour plus d'infos :\nhttps://docs.unity3d.com/Manual/SpecialFolders.html"
+      fontSize: 20
+    path: Assets/Editor Default Resources
+  - annotation:
+      annotation: "Sur Unity 6 utilisez plut\xF4t les build profiles.\n\nSinon, voici
+        quelques templates de settings de build corrects.\n\n\nATTENTION : Les builds
+        mono et IL2CPP ne profitent pas de l'incremental entre eux, essayer de regulierement
+        en faire un de chaque.\n\nAussi, pour vois builds, cr\xE9ez un dossier Builds
+        \xE0 la source du projet (PAS DANS ASSETS, A COT\xC9 DE ASSETS, il ne faut
+        pas qu'il apparaisse dans l'\xE9diteur)"
+      fontSize: 15
+    path: Assets/Project/Editor/Presets/Player

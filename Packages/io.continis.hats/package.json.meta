@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 553d9a17101d54f4ea385b8c29b488ae
+PackageManifestImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/package.json
+  uploadId: 711627

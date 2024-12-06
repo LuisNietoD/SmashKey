@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 671bc55f664b480c837cfb4408783570
+timeCreated: 1729340020
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/Rules/OpenScenes.cs
+  uploadId: 711627

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 07d4a84506154c8dbab1a62a72bb3c52
+timeCreated: 1732179486
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/CustomEditors/Rules/HighlightGizmosPropertyDrawer.cs
+  uploadId: 711627

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 4e50a31a949846f2b9e458bdddf967ec
+timeCreated: 1729612565
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/UIElements/MiniHelpBox.cs
+  uploadId: 711627

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 2fc65d346c014edaa99e05c54516741a
+timeCreated: 1729456094
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/CustomEditors/RulePropertyDrawer.cs
+  uploadId: 711627

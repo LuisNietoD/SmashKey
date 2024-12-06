@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: d1a575a6428347bbab2a2da7f779567b
+timeCreated: 1729611860
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/CustomEditors/RuleEditor.cs
+  uploadId: 711627

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 66afcbac49d44c8ca2db316ca0f2285c
+timeCreated: 1729579893
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/Rules/DisableMenuItem.cs
+  uploadId: 711627

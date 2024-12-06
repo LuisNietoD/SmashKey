@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: c3b599f090454dbc8560806e0c42152f
+timeCreated: 1728138748
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/UIElements/WorkspaceSwitcherButtonGroup.cs
+  uploadId: 711627

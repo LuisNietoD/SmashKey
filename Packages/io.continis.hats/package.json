@@ -1,0 +1,36 @@
+{
+  "name": "io.continis.hats",
+  "version": "1.0.0",
+  "displayName": "Hats",
+  "description": "A framework to enable Editor workspaces, to customise the user experience of the Editor.\nWorkspaces can have rules that trigger on activation, such as loading an Editor layout, a Scene Overlays layout, locking folders in Project view, or objects in the scene.\n\nIn addition to this, developers can built their own user-reactive tools, which change appearance and behaviour based on which workspace is active.",
+  "keywords": [
+    "workspace",
+    "team",
+    "persona",
+    "custom",
+    "editor"
+  ],
+  "author": {
+    "name": "Ciro Continisio",
+    "email": "buoybase@gmail.com",
+    "url": "https://tools.continis.io/"
+  },
+  "unity": "6000.0",
+  "samples": [
+    {
+      "displayName": "Custom Rule",
+      "description": "Contains a simple rule to showcase how to create a custom Workspace rule.",
+      "path": "Samples~/CustomRule"
+    },
+    {
+      "displayName": "Custom Team-based Inspector",
+      "description": "Contains a sample of an Inspector that changes based on the active Team.",
+      "path": "Samples~/CustomTeamBasedInspector"
+    }
+  ],
+  "documentationUrl": "https://tools.continis.io/v/hats/",
+  "dependencies": {
+    "com.unity.editorcoroutines": "1.0.0",
+    "com.unity.settings-manager": "2.0.1"
+  }
+}

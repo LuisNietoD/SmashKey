@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 1372c10df04a446ba2b19c042be17fa8
+timeCreated: 1729577459
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/Rules/LoadLayout.cs
+  uploadId: 711627

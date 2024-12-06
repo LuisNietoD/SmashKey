@@ -1,0 +1,21 @@
+{
+    "m_Dictionary": {
+        "m_DictionaryValues": [
+            {
+                "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "IncludeAssemblies",
+                "value": "{\"m_Value\":\"AmplifyImpostors,AmplifyImpostors.Editor,AmplifyImpostors.Runtime,Assembly-CSharp,Assembly-CSharp-Editor,Assembly-CSharp-Editor-firstpass,Assembly-CSharp-firstpass,DOTween.Modules,DOTweenPro.EditorScripts,DOTweenPro.Scripts,ECM2,Febucci.Attributes.Editor,Febucci.Attributes.Runtime,Febucci.TextAnimator.Demo.Runtime,Febucci.TextAnimator.Editor,Febucci.TextAnimator.Runtime,Febucci.TextAnimator.TMP.Runtime,FlatKit.Utils.Editor,fugufirecracer.takenote.editor,Lofelt.NiceVibrations,Lofelt.NiceVibrations.Demo,Lofelt.NiceVibrations.Editor,MeshBakerCore,MeshBakerEditor,MeshBakerExamples,MoreMountains.Tools,MoreMountains.Tools.Editor,NaughtyAttributes.Core,NaughtyAttributes.Editor,NaughtyAttributes.Test\"}"
+            },
+            {
+                "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "Path",
+                "value": "{\"m_Value\":\"{ProjectPath}\"}"
+            },
+            {
+                "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "HistoryPath",
+                "value": "{\"m_Value\":\"{ProjectPath}\"}"
+            }
+        ]
+    }
+}

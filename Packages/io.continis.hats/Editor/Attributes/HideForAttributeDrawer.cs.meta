@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: cde5c23109004182826e6a9038df175f
+timeCreated: 1729291727
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/Attributes/HideForAttributeDrawer.cs
+  uploadId: 711627

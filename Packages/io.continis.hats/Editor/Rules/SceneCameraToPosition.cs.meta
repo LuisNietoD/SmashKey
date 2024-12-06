@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: c5478bd6b08841e6bdd6f48793283522
+timeCreated: 1732142771
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/Rules/SceneCameraToPosition.cs
+  uploadId: 711627

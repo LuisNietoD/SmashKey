@@ -1,0 +1,247 @@
+#Container {
+    right: 3px;
+    margin-left: 12px;
+    margin-top: 1px;
+}
+
+#Title {
+    font-size: 19px;
+    -unity-font: initial;
+    margin-bottom: 10px;
+    -unity-font-definition: url("project://database/Packages/io.continis.hats/UI/Fonts/Inter-ExtraBold.ttf?fileID=12800000&guid=bed76621c1fa947258c1e5765c4f7c5d&type=3#Inter-ExtraBold");
+}
+
+.subtitle {
+    -unity-font-definition: url("project://database/Packages/io.continis.hats/UI/Fonts/Inter-ExtraBold.ttf?fileID=12800000&guid=bed76621c1fa947258c1e5765c4f7c5d&type=3#Inter-ExtraBold");
+}
+
+#Team {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#Team .unity-base-field {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#TeamTitleContainer {
+    flex-grow: 1;
+    background-image: url("project://database/Packages/io.continis.hats/UI/Images/PersonasIcon.png?fileID=2800000&guid=2065347bee5f349418f83a00e7a43ead&type=3#PersonasIcon");
+    -unity-background-scale-mode: scale-to-fit;
+    background-size: 14px 14px;
+    background-position-x: left 0;
+    padding-left: 14px;
+    margin-bottom: 4px;
+    -unity-background-image-tint-color: var(--unity-colors-slider_thumb-border);
+    background-position-y: top 5px;
+    flex-direction: row;
+    height: auto;
+    margin-left: 0;
+}
+
+#TeamFoldout {
+    -unity-font-style: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 3px;
+    flex-grow: 1;
+}
+
+#TeamFoldout > Toggle {
+    height: 20px;
+    -unity-font-style: bold;
+}
+
+#ActiveTeamLabel {
+    -unity-font-style: bold;
+    flex-grow: 1;
+}
+
+#TeamMiniIcon {
+    flex-grow: 0;
+    background-image: url("project://database/Packages/io.continis.hats/UI/Images/PersonasIcon.png?fileID=2800000&guid=2065347bee5f349418f83a00e7a43ead&type=3#PersonasIcon");
+    -unity-background-scale-mode: scale-to-fit;
+    background-size: 14px 14px;
+    background-position-x: center 0;
+    height: 18px;
+    width: 18px;
+    margin-right: 1px;
+    -unity-background-image-tint-color: var(--unity-colors-slider_thumb-border);
+    background-position-y: center 0;
+}
+
+#JoinButton {
+    position: absolute;
+    right: 1px;
+    top: 3px;
+}
+
+WorkspaceSwitcherUI {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+WorkspaceSwitcherDropdown {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 28px;
+    border-left-color: var(--unity-colors-dropdown-border);
+    border-top-color: var(--unity-colors-dropdown-border);
+    border-bottom-color: var(--unity-colors-dropdown-border_accent);
+    border-right-color: var(--unity-colors-dropdown-border);
+    background-image: url("project://database/Packages/io.continis.hats/UI/Images/PersonasIcon.png?fileID=2800000&guid=2065347bee5f349418f83a00e7a43ead&type=3#PersonasIcon");
+    -unity-background-scale-mode: scale-and-crop;
+    background-position-y: center 12px;
+    background-position-x: left 10px;
+    background-size: 14px 14px;
+    -unity-background-image-tint-color: var(--unity-colors-slider_thumb-border);
+    background-color: var(--unity-colors-button-background);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    align-self: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+WorkspaceSwitcherDropdown:hover {
+    background-color: var(--unity-colors-button-background-hover);
+}
+
+WorkspaceSwitcherDropdown:focus {
+    background-color: var(--unity-colors-button-background-hover_pressed);
+}
+
+WorkspaceSwitcherDropdown > VisualElement {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    flex-shrink: 1;
+    margin-left: -30px;
+    padding-left: 30px;
+}
+
+WorkspaceSwitcherDropdown PopupTextElement {
+    flex-grow: 0;
+    margin-right: 4px;
+    flex-shrink: 1;
+}
+
+WorkspaceSwitcherButtonGroup {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#ColorBand {
+    position: absolute;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    flex-grow: 0;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+    background-color: rgba(137, 137, 137, 0.3);
+}
+
+MiniHelpBox {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-color: var(--unity-colors-helpbox-background);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: flex-start;
+}
+
+MiniHelpBox VisualElement {
+    width: 12px;
+    height: 12px;
+    min-width: 0;
+    min-height: 0;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.workspace-switcher__button {
+    -unity-background-scale-mode: scale-and-crop;
+    background-position-y: center 12px;
+    background-position-x: left 11px;
+    background-size: 14px 14px;
+    width: 30px;
+    height: 19px;
+    -unity-background-image-tint-color: var(--unity-colors-slider_thumb-background-hover);
+}
+
+.workspace-switcher__button:checked {
+    border-top-color: var(--unity-colors-button-border);
+    border-bottom-color: var(--unity-colors-button-border_accent);
+    border-right-color: var(--unity-colors-button-border);
+    border-left-color: var(--unity-colors-button-border);
+}
+
+.workspace-switcher__button:focus {
+    border-top-color: var(--unity-colors-button-border_accent-focus);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-bottom-color: var(--unity-colors-button-border_accent-focus);
+}
+
+.toolbar-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-color: var(--unity-colors-app_toolbar_button-background-hover);
+}
+
+.toolbar-button:checked {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-color: var(--unity-colors-button-background-pressed);
+}
+
+.toolbar-button:focus {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.toolbar-dropdown {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}

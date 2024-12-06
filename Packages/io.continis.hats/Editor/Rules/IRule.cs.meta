@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 66f7f92afe814bd682cf3facdd35dfc2
+timeCreated: 1731876129
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/Rules/IRule.cs
+  uploadId: 711627

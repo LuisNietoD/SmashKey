@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 79aea62cb1ee34e7cad7579f197f0297
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/UI/Fonts/LICENSE.txt
+  uploadId: 711627

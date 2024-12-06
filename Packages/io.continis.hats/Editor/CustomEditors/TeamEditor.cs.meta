@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: ca9a11d71dfe406d9c071e322d8b93a7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _template: {fileID: 9197481963319205126, guid: fefe08c7d04604705b57f820792aee7e,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/CustomEditors/TeamEditor.cs
+  uploadId: 711627

@@ -1,0 +1,13 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/io.continis.hats/UI/Styles.uss?fileID=7433441132597879392&amp;guid=1ea6eb028325c41a7af66d867b63eef9&amp;type=3#Styles" />
+    <engine:VisualElement name="Team" data-source-type="Hats.Editor.Team, Hats.Editor">
+        <engine:VisualElement name="TeamTitleContainer">
+            <engine:Foldout name="TeamFoldout" value="false" style="-unity-font-style: normal;">
+                <engine:TextField label="Identifier" is-delayed="true" emoji-fallback-support="false" binding-path="identifier" name="IdentifierField" tooltip="The name displayed for this Team." class="unity-property-field__inspector-property unity-property-field__aligned" />
+                <editor:ObjectField label="Team Workspace" binding-path="workspace" type="Hats.Editor.Workspace, Hats.Editor" allow-scene-objects="false" name="TeamWorkspaceField" tooltip="This Workspace is enabled by default upon launching the Editor, for all users of this Team. Users can still have personal Workspaces which can add more rules and customise the Editor further." />
+                <engine:ListView name="MembersField" binding-path="members" show-border="true" show-foldout-header="true" header-title="Members" show-add-remove-footer="true" show-bound-collection-size="true" show-alternating-row-backgrounds="All" view-data-key="TeamMembersList" tooltip="When a team member launches the Editor, if the Unity ID they are logged with is included in this list, they are considered part of this Team and the Team&apos;s Workspace will be applied to them." />
+            </engine:Foldout>
+            <engine:Button text="Join Team" name="JoinButton" enabled="false" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

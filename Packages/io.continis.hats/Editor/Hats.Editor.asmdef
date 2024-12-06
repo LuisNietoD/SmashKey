@@ -1,0 +1,20 @@
+{
+    "name": "Hats.Editor",
+    "rootNamespace": "Hats.Editor",
+    "references": [
+        "GUID:49818357e697641afb75d2f8acaf1861",
+        "GUID:01d6f7dbe4db4f559d6e2d467e9689e9",
+        "GUID:478a2357cc57436488a56e564b08d223"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

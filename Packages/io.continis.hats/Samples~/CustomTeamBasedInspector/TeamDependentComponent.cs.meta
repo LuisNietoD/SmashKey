@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: f26c578f024c544c1b5c4ecfb38c54a2
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Samples~/CustomTeamBasedInspector/TeamDependentComponent.cs
+  uploadId: 711627

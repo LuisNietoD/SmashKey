@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: ce9fff4d9cdc4b52b9581208d8d02a24
+timeCreated: 1729459328
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/Rules/LockFolders.cs
+  uploadId: 711627

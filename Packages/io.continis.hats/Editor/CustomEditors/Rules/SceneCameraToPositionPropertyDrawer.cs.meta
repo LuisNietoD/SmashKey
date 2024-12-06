@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 626d7d376f1d4f278bfabcc786db0325
+timeCreated: 1732143188
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/CustomEditors/Rules/SceneCameraToPositionPropertyDrawer.cs
+  uploadId: 711627

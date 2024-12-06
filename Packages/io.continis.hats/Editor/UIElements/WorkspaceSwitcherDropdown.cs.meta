@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 7074d449b8064b0fa2129c17be4881f9
+timeCreated: 1728138374
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283644
+  packageName: Hats - Workspaces and Teams
+  packageVersion: 1.0.0
+  assetPath: Packages/io.continis.hats/Editor/UIElements/WorkspaceSwitcherDropdown.cs
+  uploadId: 711627
