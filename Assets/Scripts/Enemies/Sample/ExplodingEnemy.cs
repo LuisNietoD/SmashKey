@@ -37,7 +37,7 @@ public class ExplodingEnemy : MonoBehaviour, IEnemy
     private void MoveTowardsPlayer()
     {
         Vector3 direction = (player.position - transform.position).normalized;
-        rb.linearVelocity = direction * moveSpeed + new Vector3(0f, 0f, GameMetrics.Instance.platformTravelTime);
+        rb.linearVelocity = direction * moveSpeed + new Vector3(0f, 0f, GameController.Metrics.platformTravelTime);
     }
 
     public void Attack()
