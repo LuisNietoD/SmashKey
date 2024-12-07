@@ -7,7 +7,7 @@ namespace Stats
     {
         private void Awake()
         {
-            StatsManager.Instance.PlayerStats.bulletsPerWeapon = new Dictionary<IWeapon, int>();
+            StatsManager.Instance.PlayerStats.weaponsShot = new Dictionary<IWeapon, int>();
         }
 
         private void OnEnable()
@@ -44,7 +44,7 @@ namespace Stats
         
         private void EnemyDamageDealt(float obj)
         {
-            StatsManager.Instance.EnemyStats.totalDamageDealt += obj;
+            StatsManager.Instance.EnemyStats.totalDamageDealt += Mathf.FloorToInt(obj);
         }
 
         private void EnemySpawned(int obj)
@@ -63,7 +63,7 @@ namespace Stats
 
         private void PlayerDamageDealt(float obj)
         {
-            StatsManager.Instance.PlayerStats.totalDamageDealt += obj;
+            StatsManager.Instance.PlayerStats.totalDamageDealt += Mathf.FloorToInt(obj);
         }
 
         private void BulletShot(int obj)
@@ -73,13 +73,13 @@ namespace Stats
 
         private void WeaponBulletShot(IWeapon arg1, int arg2)
         {
-            if (!StatsManager.Instance.PlayerStats.bulletsPerWeapon.ContainsKey(arg1))
+            if (!StatsManager.Instance.PlayerStats.weaponsShot.ContainsKey(arg1))
             {
-                StatsManager.Instance.PlayerStats.bulletsPerWeapon[arg1] += arg2;
+                StatsManager.Instance.PlayerStats.weaponsShot[arg1] += arg2;
             }
             else
             {
-                StatsManager.Instance.PlayerStats.bulletsPerWeapon[arg1] = arg2;
+                StatsManager.Instance.PlayerStats.weaponsShot[arg1] = arg2;
             }
         }
 
@@ -94,12 +94,12 @@ namespace Stats
         
         private void DistanceTravelled(float obj)
         {
-            StatsManager.Instance.WorldStats.totalDistanceTravelled += obj;
+            StatsManager.Instance.WorldStats.totalDistanceTravelled += Mathf.FloorToInt(obj);
         }
 
         private void TimePlayed(float obj)
         {
-            StatsManager.Instance.WorldStats.totalTimePlayed += obj;
+            StatsManager.Instance.WorldStats.totalTimePlayed += Mathf.FloorToInt(obj);
         }
         
         #endregion
