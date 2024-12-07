@@ -35,7 +35,7 @@ public class Minigun : MonoBehaviour, IWeapon
             UpdateSpread();
             lastShotTime = Time.time;
             
-            StatsManager.Instance.OnWeaponBulletShot?.Invoke(this, 1);
+            StatsManager.Instance.OnWeaponShot?.Invoke(this, 1);
         }
     }
 

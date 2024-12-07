@@ -26,7 +26,7 @@ public class GrenadeLauncher : MonoBehaviour, IWeapon
         actualCooldown = cooldownTime;
         
         LaunchGrenades();
-        StatsManager.Instance.OnWeaponBulletShot?.Invoke(this, 1);
+        StatsManager.Instance.OnWeaponShot?.Invoke(this, 1);
     }
     
     private void LaunchGrenades()
