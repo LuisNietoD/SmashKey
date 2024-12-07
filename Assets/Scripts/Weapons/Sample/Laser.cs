@@ -27,7 +27,7 @@ public class Laser : MonoBehaviour, IWeapon
             laser.transform.parent = transform;
             laser.GetComponent<Bullet>().lifetime = lifetime;
             
-            StatsManager.Instance.OnWeaponBulletShot?.Invoke(this, 1);
+            StatsManager.Instance.OnWeaponShot?.Invoke(this, 1);
         }
     }
 }

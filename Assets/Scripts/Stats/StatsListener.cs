@@ -18,7 +18,7 @@ namespace Stats
             StatsManager.Instance.OnEnemyKilled += EnemyKilled;
             StatsManager.Instance.OnPlayerDamageDealt += PlayerDamageDealt;
             StatsManager.Instance.OnBulletShot += BulletShot;
-            StatsManager.Instance.OnWeaponBulletShot += WeaponBulletShot;
+            StatsManager.Instance.OnWeaponShot += WeaponBulletShot;
             StatsManager.Instance.OnKeyTapped += KeyTapped;
 
             StatsManager.Instance.OnDistanceTravelled += DistanceTravelled;
@@ -33,7 +33,7 @@ namespace Stats
             StatsManager.Instance.OnEnemyKilled -= EnemyKilled;
             StatsManager.Instance.OnPlayerDamageDealt -= PlayerDamageDealt;
             StatsManager.Instance.OnBulletShot -= BulletShot;
-            StatsManager.Instance.OnWeaponBulletShot -= WeaponBulletShot;
+            StatsManager.Instance.OnWeaponShot -= WeaponBulletShot;
             StatsManager.Instance.OnKeyTapped -= KeyTapped;
 
             StatsManager.Instance.OnDistanceTravelled -= DistanceTravelled;
