@@ -1,5 +1,3 @@
-using System;
-using DG.Tweening;
 using UnityEngine;
 
 public class PlatformBehavior : MonoBehaviour
@@ -16,7 +14,7 @@ public class PlatformBehavior : MonoBehaviour
 
     private void Update()
     {
-        _rb.linearVelocity = new Vector3(0, 0, GameMetrics.Instance.platformTravelTime);
+        _rb.linearVelocity = new Vector3(0, 0, GameController.Metrics.platformTravelTime);
         if (transform.position.z < PlatformManager.Instance.platformEndPoint.position.z)
         {
             SetAtSpawn();
