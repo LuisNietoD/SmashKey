@@ -4,22 +4,18 @@ using UnityEngine;
 public class Shotgun : MonoBehaviour, IWeapon
 {
     public int damage { get; } = 10;
+    public float cooldownTime = 0.5f;
+    private float actualCooldown = 0;
     public GameObject bulletPrefab;
     public Transform shootPoint;
     public float bulletSpeed = 20f;
     public Vector3 bulletScale = new Vector3(1f, 1f, 1f);
     public int bulletCount = 1;
     public float spreadAngle = 15f;
-    public float cooldownTime = 0.5f;
-    private float actualCooldown = 0f;
 
     private void Update()
     {
         actualCooldown -= Time.deltaTime;
-    }
-
-    public void Shoot()
-    {
     }
 
     public void AutoShoot()

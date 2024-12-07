@@ -19,14 +19,6 @@ public class ShootAbility : MonoSingleton<ShootAbility>
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            foreach (var weapon in weapons)
-            {
-                weapon.Shoot();
-            }
-        }
-
         if (Input.GetMouseButton(0))
         {
             foreach (var weapon in weapons)
