@@ -35,7 +35,7 @@ public class BasicEnemy : MonoBehaviour, IEnemy
 
         if (distanceToPlayer > shootingRange && (currentTween == null || !currentTween.IsActive()))
         {
-            _rb.linearVelocity = new Vector3(0, 0, GameMetrics.Instance.platformTravelTime);
+            _rb.linearVelocity = new Vector3(0, 0, GameController.Metrics.platformTravelTime);
             //MoveTowardsPlayer();
         }
         else if (distanceToPlayer <= shootingRange && (currentTween == null || !currentTween.IsActive()))
@@ -49,7 +49,7 @@ public class BasicEnemy : MonoBehaviour, IEnemy
     private void MoveTowardsPlayer()
     {
         Vector3 targetPosition = Vector3.MoveTowards(transform.position, player.position, advanceDistance);
-        currentTween = transform.DOMove(targetPosition, advanceDistance / GameMetrics.Instance.platformTravelTime)
+        currentTween = transform.DOMove(targetPosition, advanceDistance / GameController.Metrics.platformTravelTime)
             .SetEase(Ease.Linear);
     }
 
