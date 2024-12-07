@@ -23,7 +23,6 @@ public class ShootAbility : MonoSingleton<ShootAbility>
             foreach (var weapon in weapons)
             {
                 weapon.AutoShoot();
-                StatsManager.Instance.OnBulletShot?.Invoke(1);
             }
         }
     }

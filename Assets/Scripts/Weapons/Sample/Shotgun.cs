@@ -39,8 +39,8 @@ public class Shotgun : MonoBehaviour, IWeapon
                 Vector3 direction = Quaternion.Euler(0, startAngle + (i * angleIncrement), 0) * shootPoint.forward;
                 rb.linearVelocity = direction * bulletSpeed;
             }
-            
-            StatsManager.Instance.OnWeaponShot?.Invoke(this, 1);
         }
+        
+        StatsManager.Instance.OnWeaponShot?.Invoke(1);
     }
 }

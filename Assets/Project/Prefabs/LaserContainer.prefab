@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8670540269883290035}
   - component: {fileID: 7931994046007894478}
   - component: {fileID: 6338584693006192405}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6738944480069297717}
   - component: {fileID: 3553047916046611993}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LaserContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
