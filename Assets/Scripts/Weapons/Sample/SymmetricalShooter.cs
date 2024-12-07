@@ -61,6 +61,8 @@ public class SymmetricalShooter : MonoBehaviour, IWeapon
         {
             rb.linearVelocity = direction * bulletSpeed;
         }
+        
+        StatsManager.Instance.OnWeaponBulletShot?.Invoke(this, 1);
     }
 
     private int[] GenerateRandomOrder(int count)

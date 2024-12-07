@@ -21,6 +21,7 @@ public class TypingScript : MonoBehaviour
             for (int i = 0; i < keyAtTheSameTime; i++)
             {
                 TypeNextCharacter();
+                StatsManager.Instance.OnKeyTapped?.Invoke(1);
             }
             UpdateDisplay();
         }
