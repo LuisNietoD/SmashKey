@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103e863f5c0347be8a512f431aaf5ec1, type: 3}
   m_Name: Behaviors Database
   m_EditorClassIdentifier: 
-  data: []
+  data:
+  - {fileID: 11400000, guid: e8b04b87410ae3444958c5f0a28c4523, type: 2}
+  - {fileID: 11400000, guid: 26e7596ecaac81840bb6fe582c4419d7, type: 2}
+  - {fileID: 11400000, guid: 075c39397255c734098c6a7115c2faaa, type: 2}
+  - {fileID: 11400000, guid: 83cff7b8f84d6604888496492ca36f54, type: 2}
+  - {fileID: 11400000, guid: 307e87aae5a7c7946ab657fa3008a8ac, type: 2}
+  - {fileID: 11400000, guid: 6c5e97335275e6743a68684053b0d5cf, type: 2}
+  - {fileID: 11400000, guid: 9c660480458f24a41b3af99847e86367, type: 2}
+  - {fileID: 11400000, guid: 9222b34d5e4f1544682ee68c1fe4730d, type: 2}
+  - {fileID: 11400000, guid: a73c26f3b9bf8ff46bc8d9fff71f2151, type: 2}
+  - {fileID: 11400000, guid: cd4b965f9ee76124d84d83b06522aacd, type: 2}
+  - {fileID: 11400000, guid: aa8832e8a83e6a14dbc9ebf211623fd4, type: 2}
+  - {fileID: 11400000, guid: 7be97fee6b1f7d44c8b447eb49a63363, type: 2}

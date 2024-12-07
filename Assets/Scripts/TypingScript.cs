@@ -14,17 +14,16 @@ public class TypingScript : MonoBehaviour
     private int currentIndex = 0;
     private string currentDisplayedText = "";
     private int maxLines = 26;
+    public int keyAtTheSameTime = 10;
 
     void Update()
     {
         if (Input.anyKeyDown)
         {
-            TypeNextCharacter();
-            TypeNextCharacter();
-            TypeNextCharacter();
-            TypeNextCharacter();
-            TypeNextCharacter();
-            TypeNextCharacter();
+            for (int i = 0; i < keyAtTheSameTime; i++)
+            {
+                TypeNextCharacter();
+            }
             UpdateDisplay();
         }
     }
