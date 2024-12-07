@@ -89,6 +89,7 @@ public class BasicEnemy : MonoBehaviour, IEnemy
         {
             Die();
         }
+        StatsManager.Instance.OnEnemyDamageDealt?.Invoke(damageAmount);
     }
 
     private void Die()
@@ -98,5 +99,6 @@ public class BasicEnemy : MonoBehaviour, IEnemy
             currentTween.Kill();
         }
         Destroy(gameObject);
+        StatsManager.Instance.OnEnemyKilled?.Invoke(1);
     }
 }

@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public static class GameController
 {
+    public static Action OnGameEnd;
+    
     private static GameMetrics gameMetrics;
     public static GameMetrics Metrics
     {
@@ -24,5 +27,10 @@ public static class GameController
     private static bool UnLoad()
     {
         return true;
+    }
+
+    public static void GameEnd()
+    {
+        OnGameEnd?.Invoke();
     }
 }

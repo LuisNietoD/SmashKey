@@ -74,6 +74,7 @@ public class ExplodingEnemy : MonoBehaviour, IEnemy
         {
             Die();
         }
+        StatsManager.Instance.OnEnemyDamageDealt?.Invoke(damageAmount);
     }
 
     private void Die()
@@ -84,6 +85,7 @@ public class ExplodingEnemy : MonoBehaviour, IEnemy
         }
 
         Destroy(gameObject);
+        StatsManager.Instance.OnEnemyKilled?.Invoke(1);
     }
 
     private void OnDrawGizmosSelected()

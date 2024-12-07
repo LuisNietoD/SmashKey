@@ -34,5 +34,7 @@ public class PistolWeapon : MonoBehaviour, IWeapon
         {
             rb.linearVelocity = shootPoint.forward * bulletSpeed;
         }
+        
+        StatsManager.Instance.OnWeaponBulletShot?.Invoke(this, 1);
     }
 }

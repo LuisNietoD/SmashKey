@@ -9,8 +9,12 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider col)
     {
+        if (col.CompareTag("Player"))
+        {
+            StatsManager.Instance.OnPlayerDamageDealt?.Invoke(10f);
+        }
         Destroy(gameObject);
     }
 }
