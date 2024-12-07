@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98f69965df9f1f45bca1cca73688647, type: 3}
   m_Name: GameMetrics
   m_EditorClassIdentifier: 
-  <platformTravelTime>k__BackingField: 10
+  <platformTravelTime>k__BackingField: -10
