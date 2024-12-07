@@ -18,8 +18,7 @@ public class StatsManager : MonoSingleton<StatsManager>
 
     public Action<int> OnEnemyKilled; 
     public Action<float> OnPlayerDamageDealt;
-    public Action<int> OnBulletShot;
-    public Action<IWeapon, int> OnWeaponShot;
+    public Action<int> OnWeaponShot;
     public Action<int> OnKeyTapped;
 
     #endregion

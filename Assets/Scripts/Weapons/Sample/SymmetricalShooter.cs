@@ -30,6 +30,8 @@ public class SymmetricalShooter : MonoBehaviour, IWeapon
         if (bulletPrefab == null || spawnPoint == null) return;
 
         StartCoroutine(ShootWithDelay());
+        
+        StatsManager.Instance.OnWeaponShot?.Invoke(1);
     }
 
     private IEnumerator ShootWithDelay()
@@ -61,8 +63,6 @@ public class SymmetricalShooter : MonoBehaviour, IWeapon
         {
             rb.linearVelocity = direction * bulletSpeed;
         }
-        
-        StatsManager.Instance.OnWeaponShot?.Invoke(this, 1);
     }
 
     private int[] GenerateRandomOrder(int count)

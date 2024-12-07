@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8378410171396401886}
   - component: {fileID: 793125970582295316}
   - component: {fileID: 9083321419786578289}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 1812355788793378089}
   - component: {fileID: 2699000895154692829}
   - component: {fileID: 5278211173792831342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BasicEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4061160013985131645}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

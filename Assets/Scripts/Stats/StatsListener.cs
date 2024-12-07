@@ -1,15 +1,9 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Stats
 {
     public class StatsListener : MonoBehaviour
     {
-        private void Awake()
-        {
-            StatsManager.Instance.PlayerStats.weaponsShot = new Dictionary<IWeapon, int>();
-        }
-
         private void OnEnable()
         {
             StatsManager.Instance.OnEnemyDamageDealt += EnemyDamageDealt;
@@ -17,7 +11,6 @@ namespace Stats
 
             StatsManager.Instance.OnEnemyKilled += EnemyKilled;
             StatsManager.Instance.OnPlayerDamageDealt += PlayerDamageDealt;
-            StatsManager.Instance.OnBulletShot += BulletShot;
             StatsManager.Instance.OnWeaponShot += WeaponBulletShot;
             StatsManager.Instance.OnKeyTapped += KeyTapped;
 
@@ -32,7 +25,6 @@ namespace Stats
 
             StatsManager.Instance.OnEnemyKilled -= EnemyKilled;
             StatsManager.Instance.OnPlayerDamageDealt -= PlayerDamageDealt;
-            StatsManager.Instance.OnBulletShot -= BulletShot;
             StatsManager.Instance.OnWeaponShot -= WeaponBulletShot;
             StatsManager.Instance.OnKeyTapped -= KeyTapped;
 
@@ -66,21 +58,9 @@ namespace Stats
             StatsManager.Instance.PlayerStats.totalDamageDealt += Mathf.FloorToInt(obj);
         }
 
-        private void BulletShot(int obj)
+        private void WeaponBulletShot(int obj)
         {
-            StatsManager.Instance.PlayerStats.totalBulletsShot += obj;
-        }
-
-        private void WeaponBulletShot(IWeapon arg1, int arg2)
-        {
-            if (!StatsManager.Instance.PlayerStats.weaponsShot.ContainsKey(arg1))
-            {
-                StatsManager.Instance.PlayerStats.weaponsShot[arg1] += arg2;
-            }
-            else
-            {
-                StatsManager.Instance.PlayerStats.weaponsShot[arg1] = arg2;
-            }
+            StatsManager.Instance.PlayerStats.weaponsShot += obj;
         }
 
         private void KeyTapped(int obj)
