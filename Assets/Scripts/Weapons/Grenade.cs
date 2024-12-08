@@ -38,7 +38,6 @@ public class Grenade : MonoBehaviour
         {
             if (hit.CompareTag("Enemy") && hit.TryGetComponent(out IEnemy enemy))
             {
-                Debug.Log("Grenade Damage Enemy");
                 enemy.Hit(damage);
             }
         }

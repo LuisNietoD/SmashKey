@@ -1,3 +1,4 @@
+using System;
 using LTX.Singletons;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -14,6 +15,11 @@ public class PlatformManager : MonoSingleton<PlatformManager>
         {
             InstantiateMap();
         }
+    }
+
+    private void Update()
+    {
+        transform.GetChild(0).transform.position = transform.GetChild(1).GetComponent<PlatformBehavior>().front.position;
     }
 
     public void InstantiateMap()
