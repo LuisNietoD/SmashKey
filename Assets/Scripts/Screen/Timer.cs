@@ -25,6 +25,15 @@ public class Timer : MonoBehaviour
 
         if (timer >= 15f)
         {
+            switch (GameMetrics.Global.LetterCount)
+            {
+                case 0:
+                    GameController.Metrics = Resources.Load<GameMetrics>("Metrics/Low");
+                    break;
+                case >2:
+                    GameController.Metrics = Resources.Load<GameMetrics>("Metrics/Default");
+                    break;
+            }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
