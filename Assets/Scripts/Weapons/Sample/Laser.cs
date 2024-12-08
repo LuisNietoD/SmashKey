@@ -25,7 +25,7 @@ public class Laser : MonoBehaviour, IWeapon
         {
             laser = Instantiate(laserPrefab, transform.position, Quaternion.identity);
             laser.transform.parent = transform;
-            laser.GetComponent<Bullet>().lifetime = lifetime;
+            laser.GetComponent<Bullet>().Initialize(lifetime, damage);
             
             StatsManager.Instance.OnWeaponShot?.Invoke(1);
         }

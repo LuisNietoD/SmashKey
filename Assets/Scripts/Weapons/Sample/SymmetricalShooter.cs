@@ -61,6 +61,7 @@ public class SymmetricalShooter : MonoBehaviour, IWeapon
     {
         GameObject bullet = Instantiate(bulletPrefab, position, Quaternion.LookRotation(direction));
         bullet.transform.localScale = bulletScale;
+        bullet.GetComponent<Bullet>().Initialize(5, damage);
 
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)

@@ -6,11 +6,13 @@ public class Grenade : MonoBehaviour
     public GameObject explosionPrefab;
     private float explosionRadius;
     private float yExplosion;
+    public int damage;
 
-    public void Initialize(float delay, float radius)
+    public void Initialize(float delay, float radius, int damage)
     {
         yExplosion = delay;
         explosionRadius = radius;
+        this.damage = damage;
         //Invoke(nameof(Explode), explosionDelay);
     }
 
@@ -34,13 +36,10 @@ public class Grenade : MonoBehaviour
 
         foreach (Collider hit in hitColliders)
         {
-            Rigidbody rb = hit.GetComponent<Rigidbody>();
-            if (rb != null)
+            if (hit.CompareTag("Enemy") && hit.TryGetComponent(out IEnemy enemy))
             {
-                if (hit.CompareTag("Enemy"))
-                {
-                    StatsManager.Instance.OnEnemyDamageDealt?.Invoke(10f);
-                }
+                Debug.Log("Grenade Damage Enemy");
+                enemy.Hit(damage);
             }
         }
 
