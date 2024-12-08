@@ -13,3 +13,26 @@ MonoBehaviour:
   m_Name: GameMetrics
   m_EditorClassIdentifier: 
   <platformTravelTime>k__BackingField: -10
+  <LeaderboardID>k__BackingField: 25739
+  <LetterCount>k__BackingField: 2458
+  GrenadeLauncher_CooldownTime: 1
+  GrenadeLauncher_GrenadeCount: 5
+  Laser_CooldownTime: 5
+  Laser_Lifetime: 7
+  Minigun_FireRate: 0.1
+  Minigun_BulletSpeed: 20
+  Minigun_BulletScale: {x: 0.3, y: 0.3, z: 0.3}
+  Pistol_CooldownTime: 1.2
+  Pistol_BulletSpeed: 20
+  Pistol_BulletScale: {x: 1, y: 1, z: 1}
+  Shotgun_CooldownTime: 0.5
+  Shotgun_SpreadAngle: 15
+  Shotgun_BulletSpeed: 20
+  Shotgun_BulletCount: 3
+  Shotgun_BulletScale: {x: 0.5, y: 0.5, z: 0.5}
+  Symmetrical_CooldownTime: 0.5
+  Symmetrical_BulletSpeed: 10
+  Symmetrical_BulletCount: 2
+  Symmetrical_BulletScale: {x: 0.8, y: 0.8, z: 0.8}
+  Symmetrical_SpawnOffset: 1
+  Symmetrical_OffsetBetweenBullets: 1

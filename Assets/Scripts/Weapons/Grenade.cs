@@ -37,8 +37,10 @@ public class Grenade : MonoBehaviour
             Rigidbody rb = hit.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                Vector3 explosionDirection = (rb.transform.position - transform.position).normalized;
-                //rb.AddForce(explosionDirection * 10f, ForceMode.Impulse);
+                if (hit.CompareTag("Enemy"))
+                {
+                    StatsManager.Instance.OnEnemyDamageDealt?.Invoke(10f);
+                }
             }
         }
 

@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 6864473355728669829}
   - component: {fileID: 1517607137252634877}
   - component: {fileID: 6276780806212995041}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: SpawnMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6864473355728669829
 Transform:
   m_ObjectHideFlags: 0
@@ -4902,9 +4902,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8329914911663422612}
   - component: {fileID: 3547514905913201237}
-  - component: {fileID: 4348468057369491019}
-  m_Layer: 9
-  m_Name: PFB_Mushnade
+  m_Layer: 6
+  m_Name: PFB_Mushnade 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4943,33 +4942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 6271241949191652176, guid: 739d19610906a434a8d67ca770434aca, type: 3}
---- !u!54 &4348468057369491019
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3962259379186175884}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &4093299470447712372
 GameObject:
   m_ObjectHideFlags: 0
@@ -4981,7 +4953,7 @@ GameObject:
   - component: {fileID: 1120198841387520935}
   - component: {fileID: 585581190305339573}
   - component: {fileID: 2441615941837015923}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9864,7 +9836,7 @@ GameObject:
   - component: {fileID: 740381441778580889}
   - component: {fileID: 4154946020019840029}
   - component: {fileID: 625339819486478329}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Smoke_UpSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14756,7 +14728,7 @@ GameObject:
   - component: {fileID: 3451982048250453840}
   - component: {fileID: 6303517851726452680}
   - component: {fileID: 2535854463683130843}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Smoke_UpCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19648,7 +19620,7 @@ GameObject:
   - component: {fileID: 1080931241393869866}
   - component: {fileID: 4619120324200020195}
   - component: {fileID: 4349784915664752624}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Smoke_BotSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}

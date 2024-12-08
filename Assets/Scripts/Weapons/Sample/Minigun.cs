@@ -3,8 +3,6 @@ using UnityEngine;
 public class Minigun : MonoBehaviour, IWeapon
 {
     public int damage { get; } = 5;
-    public float cooldownTime = 0;
-    public float actualCooldown = 0;
     public GameObject bulletPrefab;
     public Transform shootPoint;
     public float bulletSpeed = 20f;
@@ -15,6 +13,13 @@ public class Minigun : MonoBehaviour, IWeapon
     private float currentSpreadAngle = 0f;
     private bool pingPongDirection = true;
     private float lastShotTime = 0f;
+    
+    private void Awake()
+    {
+        fireRate = GameMetrics.Global.Minigun_FireRate;
+        bulletSpeed = GameMetrics.Global.Minigun_BulletSpeed;
+        bulletScale = GameMetrics.Global.Minigun_BulletScale;
+    }
 
     public void AutoShoot()
     {

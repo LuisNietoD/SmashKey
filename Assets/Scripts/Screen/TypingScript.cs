@@ -15,6 +15,11 @@ public class TypingScript : MonoBehaviour
     private int maxLines = 26;
     public int keyAtTheSameTime = 10;
 
+    private void Awake()
+    {
+        GameMetrics.Global.ResetLetters();
+    }
+
     void Update()
     {
         if (Input.anyKeyDown)
@@ -22,9 +27,9 @@ public class TypingScript : MonoBehaviour
             for (int i = 0; i < keyAtTheSameTime; i++)
             {
                 TypeNextCharacter();
-                StatsManager.Instance.OnKeyTapped?.Invoke(1);
             }
             UpdateDisplay();
+            StatsManager.Instance.OnKeyTapped?.Invoke(1);
         }
     }
 
@@ -50,6 +55,7 @@ public class TypingScript : MonoBehaviour
         currentDisplayedText += currentChar;
         currentIndex++;
         letterCount++;
+        GameMetrics.Global.AddLetter();
     }
 
     void UpdateDisplay()

@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 2836654986288965559}
   m_Layer: 7
   m_Name: BasicEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5005375590568516684}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e2e562391b56534b83f6603668fcb49, type: 3}
   m_Name: 
@@ -161,7 +161,7 @@ MonoBehaviour:
   advanceDistance: 2
   shootingRange: 10
   fireRate: 1
-  bulletPrefab: {fileID: 8706755728694099306, guid: d02a0589a278a12408fa10868c4e0464, type: 3}
+  bulletPrefab: {fileID: 8706755728694099306, guid: c2a6dbf42999e1440945a9952b0f5968, type: 3}
   bulletSpawnPoint: {fileID: 4061160013985131645}
   bulletSpeed: 5
 --- !u!54 &5278211173792831342

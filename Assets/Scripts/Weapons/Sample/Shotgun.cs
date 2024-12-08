@@ -11,6 +11,15 @@ public class Shotgun : MonoBehaviour, IWeapon
     public Vector3 bulletScale = new Vector3(1f, 1f, 1f);
     public int bulletCount = 1;
     public float spreadAngle = 15f;
+    
+    private void Awake()
+    {
+        cooldownTime = GameMetrics.Global.Shotgun_CooldownTime;
+        spreadAngle = GameMetrics.Global.Shotgun_SpreadAngle;
+        bulletSpeed = GameMetrics.Global.Shotgun_BulletSpeed;
+        bulletCount = GameMetrics.Global.Shotgun_BulletCount;
+        bulletScale = GameMetrics.Global.Shotgun_BulletScale;
+    }
 
     private void Update()
     {
