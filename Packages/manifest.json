@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.lootlocker.lootlockersdk": "https://github.com/LootLocker/unity-sdk.git",
     "com.ltx.channeled-properties": "1.0.0",
     "com.ltx.singletons": "1.0.1",
     "com.ltx.tools": "1.0.2",

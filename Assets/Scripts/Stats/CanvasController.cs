@@ -26,5 +26,10 @@ namespace Stats
         {
             SceneManager.LoadScene(sceneIndex);
         }
+
+        public void Quit()
+        {
+            Application.Quit();
+        }
     }
 }
