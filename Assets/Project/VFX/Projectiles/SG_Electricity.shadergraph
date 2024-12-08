@@ -1549,10 +1549,10 @@
     "m_Guid": {
         "m_GuidSerialized": "4003de95-2732-4cff-a7c2-85f2a78d95d4"
     },
-    "m_Name": "_Alpha",
+    "m_Name": "_Opacity",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "_Alpha",
-    "m_DefaultReferenceName": "_Alpha",
+    "m_RefNameGeneratedByDisplayName": "_Opacity",
+    "m_DefaultReferenceName": "_Opacity",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -3628,7 +3628,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "f8a3f11104914cdf8dbaa50fed2ffeb3",
     "m_Id": 0,
-    "m_DisplayName": "_Alpha",
+    "m_DisplayName": "_Opacity",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
