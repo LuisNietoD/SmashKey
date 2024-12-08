@@ -1,24 +1,25 @@
-using LTX.ChanneledProperties;
 using UnityEngine;
 
 namespace Player
 {
     public class PlayerHealth : MonoBehaviour
     {
-        private void OnEnable()
-        {
-            GameController.TimeScale.AddPriority(this, PriorityTags.None, 0f);
-        }
+        private int health = 100;
         
-        private void OnDisable()
+        public void Hit(int damageAmount)
         {
-            GameController.TimeScale.RemovePriority(this);
+            health -= damageAmount;
+            if (health <= 0)
+            {
+                OnPlayerDeath();
+            }
+            StatsManager.Instance.OnPlayerDamageDealt?.Invoke(damageAmount);
         }
 
-        public void OnPlayerDeath()
+        private void OnPlayerDeath()
         {
-            GameController.TimeScale.ChangeChannelPriority(this, PriorityTags.Highest);
             GameController.OnGameEnd?.Invoke();
+            Destroy(gameObject);
         }
     }
 }
