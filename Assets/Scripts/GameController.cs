@@ -1,4 +1,5 @@
 using System;
+using LootLocker.Requests;
 using LTX.ChanneledProperties;
 using UnityEngine;
 
