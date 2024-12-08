@@ -10,8 +10,8 @@ public struct EnemyStats : Stat
     {
         return new List<int>
         {
-            totalDamageDealt,
-            totalEnemiesSpawned
+            totalEnemiesSpawned,
+            totalDamageDealt
         };
     }
 }

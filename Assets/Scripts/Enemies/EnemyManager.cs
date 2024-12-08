@@ -11,7 +11,7 @@ public class EnemySpawner : MonoSingleton<EnemySpawner>
     public Transform spawnPoint;
     public float spawnDelay = 1f;
     public int enemiesPerWave = 5;
-    public float movementDuration = 5f;
+    public float movementDuration = 10f;
     private List<IEnemy> spawnedEnemies;
 
     void Start()
@@ -24,8 +24,6 @@ public class EnemySpawner : MonoSingleton<EnemySpawner>
     {
         while (true)
         {
-            Debug.Log($"Enemies : {spawnedEnemies}, {spawnedEnemies.Count}");
-            
             while(spawnedEnemies.Count > 0)
                 yield return null;
             
@@ -50,6 +48,8 @@ public class EnemySpawner : MonoSingleton<EnemySpawner>
             {
                 enemyScript.Initialize(splineContainer, movementDuration);
             }
+
+            StatsManager.Instance.OnEnemySpawned(1);
         }
     }
 

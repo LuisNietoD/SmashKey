@@ -12,6 +12,11 @@ namespace Player
             GameController.OnGameEnd += PlayerEnd;
         }
 
+        private void OnDisable()
+        {
+            GameController.OnGameEnd -= PlayerEnd;
+        }
+
         private void Update()
         {
             playedTime += Time.deltaTime;

@@ -5,6 +5,22 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rb;
     public float speed;
     public Collider boundaryCollider;
+    private bool inGame = true;
+    
+    private void OnEnable()
+    {
+        GameController.OnGameEnd += GameEnd;
+    }
+    
+    private void OnDisable()
+    {
+        GameController.OnGameEnd -= GameEnd;
+    }
+
+    private void GameEnd()
+    {
+        inGame = false;
+    }
 
     void Start()
     {
@@ -13,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (!inGame) return;
+        
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 

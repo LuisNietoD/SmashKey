@@ -15,9 +15,29 @@ public class ShootAbility : MonoSingleton<ShootAbility>
             weapons.Add(w.GetComponent<IWeapon>());
         }
     }
+    
+    
+    private bool inGame = true;
+    
+    private void OnEnable()
+    {
+        GameController.OnGameEnd += GameEnd;
+    }
+    
+    private void OnDisable()
+    {
+        GameController.OnGameEnd -= GameEnd;
+    }
 
+    private void GameEnd()
+    {
+        inGame = false;
+    }
+    
     private void Update()
     {
+        if (!inGame) return;
+        
         if (Input.GetMouseButton(0))
         {
             foreach (var weapon in weapons)

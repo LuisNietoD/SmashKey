@@ -54,7 +54,7 @@ public class GrenadeLauncher : MonoBehaviour, IWeapon
         Grenade grenadeScript = grenade.GetComponent<Grenade>();
         if (grenadeScript != null)
         {
-            grenadeScript.Initialize(yExplode, explosionRadius);
+            grenadeScript.Initialize(yExplode, explosionRadius, damage);
         }
     }
 }

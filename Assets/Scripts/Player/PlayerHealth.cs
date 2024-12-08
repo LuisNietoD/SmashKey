@@ -8,12 +8,12 @@ namespace Player
         
         public void Hit(int damageAmount)
         {
+            StatsManager.Instance.OnPlayerDamageDealt?.Invoke(damageAmount);
             health -= damageAmount;
             if (health <= 0)
             {
                 OnPlayerDeath();
             }
-            StatsManager.Instance.OnPlayerDamageDealt?.Invoke(damageAmount);
         }
 
         private void OnPlayerDeath()
