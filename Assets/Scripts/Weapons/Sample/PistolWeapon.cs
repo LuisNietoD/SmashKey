@@ -12,6 +12,13 @@ public class PistolWeapon : MonoBehaviour, IWeapon
     [Header("Bullet Settings")] public float bulletSpeed = 20f;
     public Vector3 bulletScale = new Vector3(1f, 1f, 1f);
     
+    private void Awake()
+    {
+        cooldownTime = GameMetrics.Global.Pistol_CooldownTime;
+        bulletSpeed = GameMetrics.Global.Pistol_BulletSpeed;
+        bulletScale = GameMetrics.Global.Pistol_BulletScale;
+    }
+    
     private void Update()
     {
         actualCooldown -= Time.deltaTime;

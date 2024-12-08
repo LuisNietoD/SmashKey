@@ -15,6 +15,11 @@ public class Bullet : MonoBehaviour
         {
             StatsManager.Instance.OnPlayerDamageDealt?.Invoke(10f);
         }
+        else if (col.CompareTag("Enemy"))
+        {
+            StatsManager.Instance.OnEnemyDamageDealt?.Invoke(10f);
+        }
+        
         Destroy(gameObject);
     }
 }

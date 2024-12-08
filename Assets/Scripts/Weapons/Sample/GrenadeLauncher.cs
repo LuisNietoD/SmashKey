@@ -8,11 +8,16 @@ public class GrenadeLauncher : MonoBehaviour, IWeapon
     public GameObject grenadePrefab;
     public Transform launchPoint;
     public int grenadeCount = 5;
-    public float explosionDelay = 2f;
     public float explosionRadius = 5f;
     public float launchForce = 10f;
     public float launchAngle = 45f;
-    public float yExplode = 45f;
+    public float yExplode = 0.5f;
+
+    private void Awake()
+    {
+        cooldownTime = GameMetrics.Global.GrenadeLauncher_CooldownTime;
+        grenadeCount = GameMetrics.Global.GrenadeLauncher_GrenadeCount;
+    }
     
     private void Update()
     {

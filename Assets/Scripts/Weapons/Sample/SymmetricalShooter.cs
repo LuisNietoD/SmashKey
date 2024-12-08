@@ -14,6 +14,16 @@ public class SymmetricalShooter : MonoBehaviour, IWeapon
     public float spawnOffset = 1f;
     public float offsetBetweenBullets = 1f;
     public float spawnDelay = 0.03f;
+    
+    private void Awake()
+    {
+        cooldownTime = GameMetrics.Global.Symmetrical_CooldownTime;
+        bulletSpeed = GameMetrics.Global.Symmetrical_BulletSpeed;
+        bulletCount = GameMetrics.Global.Symmetrical_BulletCount;
+        bulletScale = GameMetrics.Global.Symmetrical_BulletScale;
+        spawnOffset = GameMetrics.Global.Symmetrical_SpawnOffset;
+        offsetBetweenBullets = GameMetrics.Global.Symmetrical_OffsetBetweenBullets;
+    }
 
     private void Update()
     {

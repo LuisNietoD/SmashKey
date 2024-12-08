@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3828528865213553307}
   m_Layer: 7
   m_Name: ExplodingEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,9 +74,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  explosionRange: 3
+  explosionRange: 1
   explosionRadius: 5
-  explosionPrefab: {fileID: 7676218370398959109, guid: d1a6a2c7ec12e68438a33996b5f027d4, type: 3}
+  explosionPrefab: {fileID: 3962259379186175884, guid: 09d726677b9fd5840835e268b4cb0ff8, type: 3}
 --- !u!1 &3810009495680560771
 GameObject:
   m_ObjectHideFlags: 0

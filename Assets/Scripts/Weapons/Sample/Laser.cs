@@ -8,6 +8,12 @@ public class Laser : MonoBehaviour, IWeapon
     public GameObject laserPrefab;
     public float lifetime;
     private GameObject laser;
+    
+    private void Awake()
+    {
+        cooldownTime = GameMetrics.Global.Laser_CooldownTime;
+        lifetime = GameMetrics.Global.Laser_Lifetime;
+    }
 
     private void Update()
     {
