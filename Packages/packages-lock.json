@@ -6,6 +6,13 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "com.lootlocker.lootlockersdk": {
+      "version": "https://github.com/LootLocker/unity-sdk.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e2600f39735530094ce9c415034185970fb8d20f"
+    },
     "com.ltx.channeled-properties": {
       "version": "1.0.0",
       "depth": 0,
