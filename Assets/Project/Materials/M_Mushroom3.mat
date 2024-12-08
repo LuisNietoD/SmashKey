@@ -45,9 +45,13 @@ Material:
     - _HasAlpha: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Twirl: 0
+    - _TwirlForce: 1
+    - _TwirlSine: 0.005
     m_Colors:
     - _BackColor: {r: 1, g: 1, b: 1, a: 0}
     - _FrontColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3571510512077443077
