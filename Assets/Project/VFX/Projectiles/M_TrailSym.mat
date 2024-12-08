@@ -46,14 +46,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _GradientBlack: 0
-    - _GradientWhite: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RotateTex: 0
     m_Colors:
     - _MainColor: {r: 1825.2128, g: 1825.2128, b: 1825.2128, a: 1}
-    - _MoveSpeed: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &673490773341320727
