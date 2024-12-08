@@ -1,4 +1,5 @@
 using System;
+using LTX.ChanneledProperties;
 using UnityEngine;
 
 public static class GameController
@@ -17,20 +18,24 @@ public static class GameController
         }
     }
     
+    public static PrioritisedProperty<float> TimeScale { get; private set; }
+    
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Load()
     {
         Application.wantsToQuit += UnLoad;
         Application.targetFrameRate = 60;
+        
+        TimeScale.AddOnValueChangeCallback(UpdateTimeScale, true);
     }
 
     private static bool UnLoad()
     {
         return true;
     }
-
-    public static void GameEnd()
+    
+    private static void UpdateTimeScale(float newScale)
     {
-        OnGameEnd?.Invoke();
+        Time.timeScale = newScale;
     }
 }

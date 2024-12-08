@@ -1,15 +1,9 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Stats
 {
     public class StatsListener : MonoBehaviour
     {
-        private void Awake()
-        {
-            StatsManager.Instance.PlayerStats.bulletsPerWeapon = new Dictionary<IWeapon, int>();
-        }
-
         private void OnEnable()
         {
             StatsManager.Instance.OnEnemyDamageDealt += EnemyDamageDealt;
@@ -17,7 +11,6 @@ namespace Stats
 
             StatsManager.Instance.OnEnemyKilled += EnemyKilled;
             StatsManager.Instance.OnPlayerDamageDealt += PlayerDamageDealt;
-            StatsManager.Instance.OnBulletShot += BulletShot;
             StatsManager.Instance.OnWeaponShot += WeaponBulletShot;
             StatsManager.Instance.OnKeyTapped += KeyTapped;
 
@@ -32,7 +25,6 @@ namespace Stats
 
             StatsManager.Instance.OnEnemyKilled -= EnemyKilled;
             StatsManager.Instance.OnPlayerDamageDealt -= PlayerDamageDealt;
-            StatsManager.Instance.OnBulletShot -= BulletShot;
             StatsManager.Instance.OnWeaponShot -= WeaponBulletShot;
             StatsManager.Instance.OnKeyTapped -= KeyTapped;
 
@@ -44,7 +36,7 @@ namespace Stats
         
         private void EnemyDamageDealt(float obj)
         {
-            StatsManager.Instance.EnemyStats.totalDamageDealt += obj;
+            StatsManager.Instance.EnemyStats.totalDamageDealt += Mathf.FloorToInt(obj);
         }
 
         private void EnemySpawned(int obj)
@@ -63,24 +55,12 @@ namespace Stats
 
         private void PlayerDamageDealt(float obj)
         {
-            StatsManager.Instance.PlayerStats.totalDamageDealt += obj;
+            StatsManager.Instance.PlayerStats.totalDamageDealt += Mathf.FloorToInt(obj);
         }
 
-        private void BulletShot(int obj)
+        private void WeaponBulletShot(int obj)
         {
-            StatsManager.Instance.PlayerStats.totalBulletsShot += obj;
-        }
-
-        private void WeaponBulletShot(IWeapon arg1, int arg2)
-        {
-            if (!StatsManager.Instance.PlayerStats.bulletsPerWeapon.ContainsKey(arg1))
-            {
-                StatsManager.Instance.PlayerStats.bulletsPerWeapon[arg1] += arg2;
-            }
-            else
-            {
-                StatsManager.Instance.PlayerStats.bulletsPerWeapon[arg1] = arg2;
-            }
+            StatsManager.Instance.PlayerStats.weaponsShot += obj;
         }
 
         private void KeyTapped(int obj)
@@ -94,12 +74,12 @@ namespace Stats
         
         private void DistanceTravelled(float obj)
         {
-            StatsManager.Instance.WorldStats.totalDistanceTravelled += obj;
+            StatsManager.Instance.WorldStats.totalDistanceTravelled += Mathf.FloorToInt(obj);
         }
 
         private void TimePlayed(float obj)
         {
-            StatsManager.Instance.WorldStats.totalTimePlayed += obj;
+            StatsManager.Instance.WorldStats.totalTimePlayed += Mathf.FloorToInt(obj);
         }
         
         #endregion
