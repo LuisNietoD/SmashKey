@@ -16,7 +16,8 @@ public class Enemy : MonoBehaviour, IEnemy
     public GameObject bulletPrefab;
     public Transform bulletSpawnPoint;
     public float bulletSpeed = 5f;
-    
+
+    [SerializeField] private Rigidbody rb;
     private Transform player;
     private float nextFireTime;
 
@@ -61,6 +62,8 @@ public class Enemy : MonoBehaviour, IEnemy
     {
         if (splineContainer == null || !inGame) return;
 
+        Debug.Log(isOnSpline);
+        
         if (isOnSpline)
         {
             timeElapsed += Time.deltaTime;
@@ -75,8 +78,16 @@ public class Enemy : MonoBehaviour, IEnemy
         }
         else if (canMove)
         {
-            transform.DOMove(splineContainer.transform.position, 5f).OnComplete(() => isOnSpline = true);
-            canMove = false;
+            Vector3 direction = ((Vector3)splineContainer.EvaluatePosition(0) - transform.position).normalized;
+            rb.linearVelocity = direction * 5f + new Vector3(0f, 0f, GameController.Metrics.platformTravelTime);
+
+            if (Vector3.Distance(splineContainer.EvaluatePosition(0), transform.position) <= 5f)
+            {
+                rb.linearVelocity = Vector3.zero;
+                
+                isOnSpline = true;
+                canMove = false;
+            }
         }
     }
     

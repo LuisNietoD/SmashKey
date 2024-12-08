@@ -28,7 +28,7 @@ MonoBehaviour:
   <Minigun_Damage>k__BackingField: 10
   <Minigun_FireRate>k__BackingField: 0.1
   <Minigun_BulletSpeed>k__BackingField: 20
-  <Minigun_BulletScale>k__BackingField: {x: 1, y: 1, z: 1}
+  <Minigun_BulletScale>k__BackingField: {x: 0.5, y: 0.5, z: 0.5}
   <Pistol_Enabled>k__BackingField: 1
   <Pistol_Damage>k__BackingField: 10
   <Pistol_CooldownTime>k__BackingField: 1.2
