@@ -23,6 +23,8 @@ public class Bullet : MonoBehaviour
         {
             other.GetComponent<IEnemy>().Hit(damage);
         }
+
+        if (gameObject.CompareTag("Laser")) return;
         
         Destroy(gameObject);
     }

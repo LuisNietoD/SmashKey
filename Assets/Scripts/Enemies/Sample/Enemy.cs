@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour, IEnemy
             if (bulletPrefab != null && bulletSpawnPoint != null)
             {
                 GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
-                bullet.GetComponent<Bullet>().Initialize(0, damage);
+                bullet.GetComponent<Bullet>().Initialize(15, damage);
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();
                 if (rb != null)
                 {

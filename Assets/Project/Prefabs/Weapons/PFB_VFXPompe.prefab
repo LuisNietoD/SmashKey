@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 266360444817112433}
   - component: {fileID: 844922560954527930}
   - component: {fileID: 8819626144385432823}
+  - component: {fileID: 2132463930702965894}
   m_Layer: 9
   m_Name: PFB_VFXPompe
   m_TagString: Untagged
@@ -75,6 +76,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d33e43f9c26a744935de4309edd503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &2132463930702965894
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990383554993008407}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 2.61}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3939086530752422913
 GameObject:
   m_ObjectHideFlags: 0

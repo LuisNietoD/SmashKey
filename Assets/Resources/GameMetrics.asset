@@ -32,19 +32,19 @@ MonoBehaviour:
   <Pistol_Enabled>k__BackingField: 1
   <Pistol_Damage>k__BackingField: 10
   <Pistol_CooldownTime>k__BackingField: 1.2
-  <Pistol_BulletSpeed>k__BackingField: 20
-  <Pistol_BulletScale>k__BackingField: {x: 0.8, y: 0.8, z: 0.8}
+  <Pistol_BulletSpeed>k__BackingField: 40
+  <Pistol_BulletScale>k__BackingField: {x: 1, y: 1, z: 1}
   <Shotgun_Enabled>k__BackingField: 1
   <Shotgun_Damage>k__BackingField: 10
   <Shotgun_CooldownTime>k__BackingField: 0.5
-  <Shotgun_SpreadAngle>k__BackingField: 15
-  <Shotgun_BulletSpeed>k__BackingField: 20
+  <Shotgun_SpreadAngle>k__BackingField: 50
+  <Shotgun_BulletSpeed>k__BackingField: 25
   <Shotgun_BulletCount>k__BackingField: 3
   Shotgun_BulletScale: {x: 0.5, y: 0.5, z: 0.5}
   <Symmetrical_Enabled>k__BackingField: 1
   <Symmetrical_Damage>k__BackingField: 10
   <Symmetrical_CooldownTime>k__BackingField: 0.5
-  <Symmetrical_BulletSpeed>k__BackingField: 10
+  <Symmetrical_BulletSpeed>k__BackingField: 15
   <Symmetrical_BulletCount>k__BackingField: 2
   <Symmetrical_BulletScale>k__BackingField: {x: 0.7, y: 0.7, z: 0.7}
   <Symmetrical_SpawnOffset>k__BackingField: 1

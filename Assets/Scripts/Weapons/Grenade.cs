@@ -36,13 +36,10 @@ public class Grenade : MonoBehaviour
 
         foreach (Collider hit in hitColliders)
         {
-            Rigidbody rb = hit.GetComponent<Rigidbody>();
-            if (rb != null)
+            if (hit.CompareTag("Enemy") && hit.TryGetComponent(out IEnemy enemy))
             {
-                if (hit.CompareTag("Enemy"))
-                {
-                    hit.GetComponent<IEnemy>().Hit(damage);
-                }
+                Debug.Log("Grenade Damage Enemy");
+                enemy.Hit(damage);
             }
         }
 

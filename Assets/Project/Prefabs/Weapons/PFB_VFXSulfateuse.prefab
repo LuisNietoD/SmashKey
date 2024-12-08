@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.14675727, y: 0.41664, z: 0.41664}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6236521088420506387}
@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 6236521088420506387}
   - component: {fileID: 321191454797932600}
   - component: {fileID: 7199225274765306168}
+  - component: {fileID: 2013597545060224056}
   m_Layer: 9
   m_Name: PFB_VFXSulfateuse
   m_TagString: Untagged
@@ -114,7 +115,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8259, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2222271114533414647}
@@ -160,6 +161,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d33e43f9c26a744935de4309edd503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &2013597545060224056
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986523990057635908}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7261108546735892818
 GameObject:
   m_ObjectHideFlags: 0
