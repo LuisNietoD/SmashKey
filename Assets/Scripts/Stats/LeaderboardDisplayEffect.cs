@@ -29,7 +29,7 @@ namespace Stats
             
                 DisplayElementEffect(element.gameObject);
             
-                yield return new WaitForSeconds(0.15f * (element.transform.childCount));
+                yield return new WaitForSeconds(0.15f * element.transform.childCount);
             }
         }
 
