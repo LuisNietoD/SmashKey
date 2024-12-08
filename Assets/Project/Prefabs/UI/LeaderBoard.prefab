@@ -861,7 +861,6 @@ GameObject:
   - component: {fileID: 8403436767624329081}
   - component: {fileID: 2848863469684548128}
   - component: {fileID: 6392937918806555899}
-  - component: {fileID: 7412067660666520014}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -955,21 +954,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &7412067660666520014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749743841725019624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac33c58d64c74e2481cdc6ad65143999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allPanels:
-  - {fileID: 8404201459542945842}
-  - {fileID: 4128937050578804905}
 --- !u!1 &1834120376812985042
 GameObject:
   m_ObjectHideFlags: 0
@@ -4480,7 +4464,6 @@ GameObject:
   - component: {fileID: 1114355283780377274}
   - component: {fileID: 1079099130452955215}
   - component: {fileID: 2610804379583919159}
-  - component: {fileID: 65502262025381583}
   m_Layer: 5
   m_Name: PlayerScore
   m_TagString: Untagged
@@ -4575,22 +4558,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &65502262025381583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9093982363404145223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac33c58d64c74e2481cdc6ad65143999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allPanels:
-  - {fileID: 3755306329747567638}
-  - {fileID: 4760778256168841747}
-  - {fileID: 8156232583224504622}
 --- !u!1 &9115081309639396457
 GameObject:
   m_ObjectHideFlags: 0
