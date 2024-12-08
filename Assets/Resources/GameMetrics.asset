@@ -15,24 +15,37 @@ MonoBehaviour:
   <platformTravelTime>k__BackingField: -10
   <LeaderboardID>k__BackingField: 25739
   <LetterCount>k__BackingField: 2458
-  GrenadeLauncher_CooldownTime: 1
-  GrenadeLauncher_GrenadeCount: 5
-  Laser_CooldownTime: 5
-  Laser_Lifetime: 7
-  Minigun_FireRate: 0.1
-  Minigun_BulletSpeed: 20
-  Minigun_BulletScale: {x: 0.3, y: 0.3, z: 0.3}
-  Pistol_CooldownTime: 1.2
-  Pistol_BulletSpeed: 20
-  Pistol_BulletScale: {x: 1, y: 1, z: 1}
-  Shotgun_CooldownTime: 0.5
-  Shotgun_SpreadAngle: 15
-  Shotgun_BulletSpeed: 20
-  Shotgun_BulletCount: 3
+  <GrenadeLauncher_Enabled>k__BackingField: 1
+  <GrenadeLauncher_Damage>k__BackingField: 10
+  <GrenadeLauncher_CooldownTime>k__BackingField: 1
+  <GrenadeLauncher_GrenadeCount>k__BackingField: 5
+  <GrenadeLauncher_ExplosionRadius>k__BackingField: 5
+  <Laser_Enabled>k__BackingField: 1
+  <Laser_Damage>k__BackingField: 10
+  <Laser_CooldownTime>k__BackingField: 7
+  <Laser_Lifetime>k__BackingField: 5
+  <Minigun_Enabled>k__BackingField: 1
+  <Minigun_Damage>k__BackingField: 10
+  <Minigun_FireRate>k__BackingField: 0.1
+  <Minigun_BulletSpeed>k__BackingField: 20
+  <Minigun_BulletScale>k__BackingField: {x: 1, y: 1, z: 1}
+  <Pistol_Enabled>k__BackingField: 1
+  <Pistol_Damage>k__BackingField: 10
+  <Pistol_CooldownTime>k__BackingField: 1.2
+  <Pistol_BulletSpeed>k__BackingField: 20
+  <Pistol_BulletScale>k__BackingField: {x: 0.8, y: 0.8, z: 0.8}
+  <Shotgun_Enabled>k__BackingField: 1
+  <Shotgun_Damage>k__BackingField: 10
+  <Shotgun_CooldownTime>k__BackingField: 0.5
+  <Shotgun_SpreadAngle>k__BackingField: 15
+  <Shotgun_BulletSpeed>k__BackingField: 20
+  <Shotgun_BulletCount>k__BackingField: 3
   Shotgun_BulletScale: {x: 0.5, y: 0.5, z: 0.5}
-  Symmetrical_CooldownTime: 0.5
-  Symmetrical_BulletSpeed: 10
-  Symmetrical_BulletCount: 2
-  Symmetrical_BulletScale: {x: 0.8, y: 0.8, z: 0.8}
-  Symmetrical_SpawnOffset: 1
-  Symmetrical_OffsetBetweenBullets: 1
+  <Symmetrical_Enabled>k__BackingField: 1
+  <Symmetrical_Damage>k__BackingField: 10
+  <Symmetrical_CooldownTime>k__BackingField: 0.5
+  <Symmetrical_BulletSpeed>k__BackingField: 10
+  <Symmetrical_BulletCount>k__BackingField: 2
+  <Symmetrical_BulletScale>k__BackingField: {x: 0.7, y: 0.7, z: 0.7}
+  <Symmetrical_SpawnOffset>k__BackingField: 1
+  <Symmetrical_OffsetBetweenBullets>k__BackingField: 1

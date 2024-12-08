@@ -1,14 +1,15 @@
 using Player;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class Bullet : MonoBehaviour
 {
-    public float lifetime = 5f;
-    public int damage;
-
-    private void Start()
+    private int damage;
+    
+    public void Initialize(float lifeTime, int damage)
     {
-        Destroy(gameObject, lifetime);
+        this.damage = damage;
+        Destroy(gameObject, lifeTime);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -16,12 +17,10 @@ public class Bullet : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
-            StatsManager.Instance.OnPlayerDamageDealt?.Invoke(10f);
             other.GetComponent<PlayerHealth>().Hit(damage);
         }
         else if (other.CompareTag("Enemy"))
         {
-            StatsManager.Instance.OnEnemyDamageDealt?.Invoke(10f);
             other.GetComponent<IEnemy>().Hit(damage);
         }
         

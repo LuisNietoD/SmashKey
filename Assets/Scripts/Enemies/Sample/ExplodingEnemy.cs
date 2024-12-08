@@ -33,10 +33,28 @@ public class ExplodingEnemy : MonoBehaviour, IEnemy
         sequence.Append(tr.DOMoveY(3f, 2f))
             .OnComplete(() => canMove = true);
     }
+    
+    private bool inGame = true;
+    
+    private void OnEnable()
+    {
+        GameController.OnGameEnd += GameEnd;
+    }
+    
+    private void OnDisable()
+    {
+        GameController.OnGameEnd -= GameEnd;
+    }
+
+    private void GameEnd()
+    {
+        inGame = false;
+    }
 
     void Update()
     {
-        if (player == null || !canMove) return;
+        if (player == null || !canMove || !inGame) return;
+        
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -97,13 +115,13 @@ public class ExplodingEnemy : MonoBehaviour, IEnemy
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         }
+        StatsManager.Instance.OnEnemyKilled?.Invoke(1);
         Destroy(gameObject);
     }
 
     private void OnDestroy()
     {
         EnemySpawner.Instance.OnEnemyKilled(this);
-        StatsManager.Instance.OnEnemyKilled?.Invoke(1);
     }
 
     private void OnDrawGizmosSelected()

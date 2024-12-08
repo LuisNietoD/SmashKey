@@ -6,11 +6,13 @@ public class Grenade : MonoBehaviour
     public GameObject explosionPrefab;
     private float explosionRadius;
     private float yExplosion;
+    public int damage;
 
-    public void Initialize(float delay, float radius)
+    public void Initialize(float delay, float radius, int damage)
     {
         yExplosion = delay;
         explosionRadius = radius;
+        this.damage = damage;
         //Invoke(nameof(Explode), explosionDelay);
     }
 
@@ -39,7 +41,7 @@ public class Grenade : MonoBehaviour
             {
                 if (hit.CompareTag("Enemy"))
                 {
-                    StatsManager.Instance.OnEnemyDamageDealt?.Invoke(10f);
+                    hit.GetComponent<IEnemy>().Hit(damage);
                 }
             }
         }

@@ -28,6 +28,7 @@ public class PistolWeapon : MonoBehaviour, IWeapon
 
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
         bullet.transform.localScale = bulletScale;
+        bullet.GetComponent<Bullet>().Initialize(5, damage);
 
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
