@@ -7,24 +7,14 @@ public class PlatformBehavior : MonoBehaviour
     private MeshFilter _meshFilter;
 
     [SerializeField] private Rigidbody _rb;
-    private void Start()
-    { 
-        _meshFilter.mesh = PlatformManager.Instance.GetRandomMesh();
-    }
 
     private void Update()
     {
         _rb.linearVelocity = new Vector3(0, 0, GameController.Metrics.platformTravelTime);
         if (transform.position.z < PlatformManager.Instance.platformEndPoint.position.z)
         {
-            SetAtSpawn();
+            PlatformManager.Instance.InstantiateMap();
+            Destroy(gameObject);
         }
-    }
-
-    private void SetAtSpawn()
-    {
-        _meshFilter.mesh = PlatformManager.Instance.GetRandomMesh();
-        transform.position = PlatformManager.Instance.GetFarPlatform().GetComponent<PlatformBehavior>().front.position;
-        transform.SetAsFirstSibling();
     }
 }

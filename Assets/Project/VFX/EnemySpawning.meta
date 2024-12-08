@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Project/VFX/EnemySpawning.meta
 guid: 3151c7c0d6ddfe743885d1edde92ee4b
+========
+guid: 2d9666054a2843447b70bdd7bd4c5e1f
+>>>>>>>> cbeff012b959022798fe99a62a9b23df1c4e9450:Assets/Project/Prefabs/Maps.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

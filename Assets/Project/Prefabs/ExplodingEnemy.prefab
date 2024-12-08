@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6586710520188114855}
   - component: {fileID: 7248524061025075124}
-  - component: {fileID: 3828528865213553307}
+  - component: {fileID: 1671096349733553609}
+  - component: {fileID: 8193574024006335238}
   m_Layer: 7
   m_Name: ExplodingEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +62,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3828528865213553307
+--- !u!114 &1671096349733553609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,9 +75,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  explosionRange: 3
+  explosionRange: 1
   explosionRadius: 5
-  explosionPrefab: {fileID: 7676218370398959109, guid: d1a6a2c7ec12e68438a33996b5f027d4, type: 3}
+  explosionPrefab: {fileID: 3962259379186175884, guid: 09d726677b9fd5840835e268b4cb0ff8, type: 3}
+--- !u!135 &8193574024006335238
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184969599840251916}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3810009495680560771
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,10 +110,9 @@ GameObject:
   - component: {fileID: 913050651823618934}
   - component: {fileID: 4146907329445950522}
   - component: {fileID: 7105029415612255410}
-  - component: {fileID: 6568367234062159688}
   m_Layer: 7
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +163,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 079c6b7cc9d52094da2a7281f45fc0b0, type: 2}
+  - {fileID: 2100000, guid: 451112f5aba7d8041bc52b85134a0e73, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -164,24 +185,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &6568367234062159688
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3810009495680560771}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

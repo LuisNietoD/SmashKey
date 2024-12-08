@@ -3,17 +3,21 @@ using System.Collections;
 
 public class SymmetricalShooter : MonoBehaviour, IWeapon
 {
-    public int damage { get; } = 10;
-    public float cooldownTime = 0.5f;
-    private float actualCooldown = 0;
+    
     public GameObject bulletPrefab;
     public Transform spawnPoint;
-    public float bulletSpeed = 10f;
-    public Vector3 bulletScale = new Vector3(1f, 1f, 1f);
-    public int bulletCount = 2;
-    public float spawnOffset = 1f;
-    public float offsetBetweenBullets = 1f;
+    
+    public int damage => GameMetrics.Global.Symmetrical_Damage;
+    private float cooldownTime => GameMetrics.Global.Symmetrical_CooldownTime;
+    
+    
+    private float bulletSpeed => GameMetrics.Global.Symmetrical_BulletSpeed;
+    private Vector3 bulletScale => GameMetrics.Global.Symmetrical_BulletScale;
+    private int bulletCount => GameMetrics.Global.Symmetrical_BulletCount;
+    private float spawnOffset => GameMetrics.Global.Symmetrical_SpawnOffset;
+    private float offsetBetweenBullets => GameMetrics.Global.Symmetrical_OffsetBetweenBullets;
     public float spawnDelay = 0.03f;
+    private float actualCooldown = 0;
 
     private void Update()
     {
@@ -22,7 +26,7 @@ public class SymmetricalShooter : MonoBehaviour, IWeapon
     
     public void AutoShoot()
     {
-        if (actualCooldown > 0)
+        if (actualCooldown > 0 || !GameMetrics.Global.Symmetrical_Enabled)
             return;
         
         actualCooldown = cooldownTime;

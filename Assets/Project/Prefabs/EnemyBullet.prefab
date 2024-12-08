@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8706755728694099306}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.026237, y: 96.75023, z: 49.72442}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 5
+  damage: 10
 --- !u!54 &5642270008489281784
 Rigidbody:
   m_ObjectHideFlags: 0

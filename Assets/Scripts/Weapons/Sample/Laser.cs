@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour, IWeapon
 {
-    public int damage { get; }
-    public float cooldownTime = 5f;
+    public int damage => GameMetrics.Global.Laser_Damage;
+    private float cooldownTime => GameMetrics.Global.Laser_CooldownTime;
     private float actualCooldown = 0;
     public GameObject laserPrefab;
-    public float lifetime;
+    private float lifetime => GameMetrics.Global.Laser_Lifetime;
     private GameObject laser;
 
     private void Update()
@@ -16,7 +16,7 @@ public class Laser : MonoBehaviour, IWeapon
 
     public void AutoShoot()
     {
-        if (actualCooldown > 0)
+        if (actualCooldown > 0 || !GameMetrics.Global.Laser_Enabled)
             return;
         
         actualCooldown = cooldownTime;

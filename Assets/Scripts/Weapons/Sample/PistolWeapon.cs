@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class PistolWeapon : MonoBehaviour, IWeapon
 {
-    [Header("Weapon Settings")] public int damage { get; } = 10;
-
-    public float cooldownTime = 1.2f;
+    [Header("Weapon Settings")] 
+    public int damage => GameMetrics.Global.Pistol_Damage;
+    private float cooldownTime => GameMetrics.Global.Pistol_CooldownTime;
     private float actualCooldown = 0;
     public GameObject bulletPrefab;
     public Transform shootPoint;
 
-    [Header("Bullet Settings")] public float bulletSpeed = 20f;
-    public Vector3 bulletScale = new Vector3(1f, 1f, 1f);
+    private float bulletSpeed => GameMetrics.Global.Pistol_BulletSpeed;
+    private Vector3 bulletScale => GameMetrics.Global.Pistol_BulletScale;
     
     private void Update()
     {
@@ -24,7 +24,7 @@ public class PistolWeapon : MonoBehaviour, IWeapon
         
         actualCooldown = cooldownTime;
         
-        if (bulletPrefab == null || shootPoint == null) return;
+        if (bulletPrefab == null || shootPoint == null || !GameMetrics.Global.Pistol_Enabled) return;
 
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
         bullet.transform.localScale = bulletScale;

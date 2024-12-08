@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9089813864444072098}
   - component: {fileID: 6632226099593273735}
   - component: {fileID: 775404391329844572}
-  m_Layer: 14
+  m_Layer: 9
   m_Name: Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf4f7401d085884396384866520e6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 6271241949191652176, guid: 739d19610906a434a8d67ca770434aca, type: 3}
+  explosionPrefab: {fileID: 3962259379186175884, guid: f16eba7f9474904499623b071cc80a6a, type: 3}
 --- !u!54 &775404391329844572
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 5887466731979482495}
   - component: {fileID: 7734098029483064439}
   - component: {fileID: 4321912531401307217}
-  m_Layer: 14
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

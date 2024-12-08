@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class GrenadeLauncher : MonoBehaviour, IWeapon
 {
-    public int damage { get; } = 10;
-    public float cooldownTime = 1;
+    public int damage => GameMetrics.Global.GrenadeLauncher_Damage;
+    private float cooldownTime => GameMetrics.Global.GrenadeLauncher_CooldownTime;
     private float actualCooldown = 0;
     public GameObject grenadePrefab;
     public Transform launchPoint;
-    public int grenadeCount = 5;
-    public float explosionDelay = 2f;
-    public float explosionRadius = 5f;
+    private int grenadeCount => GameMetrics.Global.GrenadeLauncher_GrenadeCount;
+    private float explosionRadius => GameMetrics.Global.GrenadeLauncher_ExplosionRadius;
     public float launchForce = 10f;
     public float launchAngle = 45f;
-    public float yExplode = 45f;
+    public float yExplode = 0.5f;
     
     private void Update()
     {
@@ -21,7 +20,7 @@ public class GrenadeLauncher : MonoBehaviour, IWeapon
 
     public void AutoShoot()
     {
-        if (actualCooldown > 0)
+        if (actualCooldown > 0 || !GameMetrics.Global.GrenadeLauncher_Enabled)
             return;
         
         actualCooldown = cooldownTime;
