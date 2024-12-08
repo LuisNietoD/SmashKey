@@ -2,24 +2,15 @@ using UnityEngine;
 
 public class Shotgun : MonoBehaviour, IWeapon
 {
-    public int damage { get; } = 10;
-    public float cooldownTime = 0.5f;
+    public int damage => GameMetrics.Global.Shotgun_Damage;
+    private float cooldownTime => GameMetrics.Global.Shotgun_CooldownTime;
     private float actualCooldown = 0;
     public GameObject bulletPrefab;
     public Transform shootPoint;
-    public float bulletSpeed = 20f;
-    public Vector3 bulletScale = new Vector3(1f, 1f, 1f);
-    public int bulletCount = 1;
-    public float spreadAngle = 15f;
-    
-    private void Awake()
-    {
-        cooldownTime = GameMetrics.Global.Shotgun_CooldownTime;
-        spreadAngle = GameMetrics.Global.Shotgun_SpreadAngle;
-        bulletSpeed = GameMetrics.Global.Shotgun_BulletSpeed;
-        bulletCount = GameMetrics.Global.Shotgun_BulletCount;
-        bulletScale = GameMetrics.Global.Shotgun_BulletScale;
-    }
+    private float bulletSpeed => GameMetrics.Global.Shotgun_BulletSpeed;
+    private Vector3 bulletScale => GameMetrics.Global.Shotgun_BulletScale;
+    private int bulletCount => GameMetrics.Global.Shotgun_BulletCount;
+    private float spreadAngle => GameMetrics.Global.Shotgun_SpreadAngle;
 
     private void Update()
     {
@@ -28,7 +19,7 @@ public class Shotgun : MonoBehaviour, IWeapon
 
     public void AutoShoot()
     {
-        if (actualCooldown > 0)
+        if (actualCooldown > 0 || !GameMetrics.Global.Shotgun_Enabled)
             return;
         
         actualCooldown = cooldownTime;

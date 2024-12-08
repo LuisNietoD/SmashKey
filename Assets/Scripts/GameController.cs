@@ -17,6 +17,8 @@ public static class GameController
 
             return gameMetrics;
         }
+
+        set => gameMetrics = value;
     }
     
     public static PrioritisedProperty<float> TimeScale { get; private set; }

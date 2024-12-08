@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98f69965df9f1f45bca1cca73688647, type: 3}
+  m_Name: Low
+  m_EditorClassIdentifier: 
+  <platformTravelTime>k__BackingField: -10
+  <LeaderboardID>k__BackingField: 25739
+  <LetterCount>k__BackingField: 2458
+  <GrenadeLauncher_Enabled>k__BackingField: 1
+  <GrenadeLauncher_Damage>k__BackingField: 10
+  <GrenadeLauncher_CooldownTime>k__BackingField: 0.3
+  <GrenadeLauncher_GrenadeCount>k__BackingField: 15
+  <GrenadeLauncher_ExplosionRadius>k__BackingField: 5
+  <Laser_Enabled>k__BackingField: 0
+  <Laser_Damage>k__BackingField: 10
+  <Laser_CooldownTime>k__BackingField: 5
+  <Laser_Lifetime>k__BackingField: 1
+  <Minigun_Enabled>k__BackingField: 0
+  <Minigun_Damage>k__BackingField: 10
+  <Minigun_FireRate>k__BackingField: 0.1
+  <Minigun_BulletSpeed>k__BackingField: 20
+  <Minigun_BulletScale>k__BackingField: {x: 1, y: 1, z: 1}
+  <Pistol_Enabled>k__BackingField: 0
+  <Pistol_Damage>k__BackingField: 10
+  <Pistol_CooldownTime>k__BackingField: 1.2
+  <Pistol_BulletSpeed>k__BackingField: 20
+  <Pistol_BulletScale>k__BackingField: {x: 1, y: 1, z: 1}
+  <Shotgun_Enabled>k__BackingField: 0
+  <Shotgun_Damage>k__BackingField: 10
+  <Shotgun_CooldownTime>k__BackingField: 0.5
+  <Shotgun_SpreadAngle>k__BackingField: 15
+  <Shotgun_BulletSpeed>k__BackingField: 20
+  <Shotgun_BulletCount>k__BackingField: 3
+  Shotgun_BulletScale: {x: 0.5, y: 0.5, z: 0.5}
+  <Symmetrical_Enabled>k__BackingField: 0
+  <Symmetrical_Damage>k__BackingField: 10
+  <Symmetrical_CooldownTime>k__BackingField: 0.5
+  <Symmetrical_BulletSpeed>k__BackingField: 10
+  <Symmetrical_BulletCount>k__BackingField: 2
+  <Symmetrical_BulletScale>k__BackingField: {x: 1, y: 1, z: 1}
+  <Symmetrical_SpawnOffset>k__BackingField: 1
+  <Symmetrical_OffsetBetweenBullets>k__BackingField: 1
