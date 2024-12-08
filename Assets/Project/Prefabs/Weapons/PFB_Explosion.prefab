@@ -4903,7 +4903,7 @@ GameObject:
   - component: {fileID: 8329914911663422612}
   - component: {fileID: 3547514905913201237}
   m_Layer: 6
-  m_Name: PFB_Mushnade 1
+  m_Name: PFB_Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4918,7 +4918,7 @@ Transform:
   m_GameObject: {fileID: 3962259379186175884}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.92, y: 2.98, z: -7.2287517}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4942,6 +4942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 6271241949191652176, guid: 739d19610906a434a8d67ca770434aca, type: 3}
+  damage: 0
 --- !u!1 &4093299470447712372
 GameObject:
   m_ObjectHideFlags: 0

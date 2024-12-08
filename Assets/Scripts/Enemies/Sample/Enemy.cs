@@ -35,14 +35,31 @@ public class Enemy : MonoBehaviour, IEnemy
         Transform tr = transform;
         tr.position = new Vector3(tr.position.x, tr.position.y-3f, tr.position.z);
 
-        Sequence sequence = DOTween.Sequence();;
+        Sequence sequence = DOTween.Sequence();
         sequence.Append(tr.DOMoveY(3f, 2f))
             .OnComplete(() => canMove = true);
+    }
+    
+    private bool inGame = true;
+    
+    private void OnEnable()
+    {
+        GameController.OnGameEnd += GameEnd;
+    }
+    
+    private void OnDisable()
+    {
+        GameController.OnGameEnd -= GameEnd;
+    }
+
+    private void GameEnd()
+    {
+        inGame = false;
     }
 
     void Update()
     {
-        if (splineContainer == null) return;
+        if (splineContainer == null || !inGame) return;
 
         if (isOnSpline)
         {
@@ -72,6 +89,7 @@ public class Enemy : MonoBehaviour, IEnemy
             if (bulletPrefab != null && bulletSpawnPoint != null)
             {
                 GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
+                bullet.GetComponent<Bullet>().Initialize(15, damage);
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
@@ -96,7 +114,7 @@ public class Enemy : MonoBehaviour, IEnemy
     {
         EnemySpawner.Instance.OnEnemyKilled(this);
         
-        Destroy(gameObject);
         StatsManager.Instance.OnEnemyKilled?.Invoke(1);
+        Destroy(gameObject);
     }
 }
