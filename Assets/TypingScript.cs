@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class TypingScript : MonoBehaviour
 {
+    private string textToTyping;
     public TextMeshPro textDisplay;
     public string fullText;
     public int letterCount = 0;
