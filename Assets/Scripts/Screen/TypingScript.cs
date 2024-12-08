@@ -14,14 +14,21 @@ public class TypingScript : MonoBehaviour
     private string currentDisplayedText = "";
     private int maxLines = 26;
     public int keyAtTheSameTime = 10;
+    public GameObject compiler;
 
     private void Awake()
     {
         GameMetrics.Global.ResetLetters();
-    }
+    }                
 
     void Update()
     {
+        if (currentIndex >= fullText.Length)
+        {
+            compiler.SetActive(true);
+            return;
+        }
+        
         if (Input.anyKeyDown)
         {
             for (int i = 0; i < keyAtTheSameTime; i++)

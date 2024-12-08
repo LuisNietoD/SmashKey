@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    float timer = 0f;
+    float timer = 15f;
     private TMP_Text txt;
 
     private void Awake()
@@ -15,17 +15,21 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+        timer -= Time.deltaTime;
         txt.text = timer.ToString("00");
 
-        if (Input.GetMouseButtonDown(1))
+        if (timer <= 0f)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-
-        if (timer >= 15f)
-        {
-            switch (GameMetrics.Global.LetterCount)
+            int letterScore = GameMetrics.Global.LetterCount;
+            if (GameMetrics.Global.Multiply >= 0)
+            {
+                letterScore *= GameMetrics.Global.Multiply;
+            }
+            else
+            {
+                letterScore /= GameMetrics.Global.Multiply;
+            }
+            switch (letterScore)
             {
                 case 0:
                     GameController.Metrics = Resources.Load<GameMetrics>("Metrics/Low");

@@ -11,7 +11,10 @@ public class GameMetrics : ScriptableObject
     [field : SerializeField] public string LeaderboardID { get; private set; }
     
     [field : SerializeField] public int LetterCount { get; private set; }
+    [field : SerializeField] public int Multiply { get; private set; }
     public void AddLetter() => LetterCount++;
+    public void AddMultiply() => Multiply++;
+    public void RemoveMultiply() => Multiply--;
     public void ResetLetters() => LetterCount = 0;
 
     [field: SerializeField, FoldoutGroup("Grenade Launcher")]
