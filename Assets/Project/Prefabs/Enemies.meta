@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Project/Prefabs/Enemies.meta
 guid: 6e09bbbeb652ee44e830e1ee5cd89ba2
 folderAsset: yes
 DefaultImporter:
+========
+guid: b57c959573c8d4c4fa4486a0ed3bbf98
+PrefabImporter:
+>>>>>>>> 9d96ab7 (Added PFB_ProjectilSmall + PFB_ProjectilSmall (ENEMY SHOT)):Assets/Project/Prefabs/PFB_MushnadeMESH.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
