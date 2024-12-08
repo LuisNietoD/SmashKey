@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5952353038702666050
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 9
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -7,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_TrailSym
+  m_Name: M_SulfateuseTrail
   m_Shader: {fileID: -6465566751694194690, guid: 4918a63baf1a07e4cab6dda7a753dd71, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,7 +38,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7e0c4a1b79299bf459b4fafcb7b77a93, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7cac1f0810d076542bbfbe740c288d30, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_2c23e569ee9c4d999c8df047e7868dfb_Texture_1_Texture2D:
@@ -47,25 +60,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _GradientBlack: 0
-    - _GradientWhite: 1
+    - _GradientWhite: 0.17
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RotateTex: 0
+    - _RotateTex: 90
     m_Colors:
-    - _MainColor: {r: 1825.2128, g: 1825.2128, b: 1825.2128, a: 1}
-    - _MoveSpeed: {r: 1, g: 1, b: 0, a: 0}
+    - _MainColor: {r: 8.000001, g: 3.0301719, b: 0, a: 1}
+    - _MoveSpeed: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &673490773341320727
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 9
