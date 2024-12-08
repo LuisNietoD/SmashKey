@@ -1,3 +1,6 @@
+using System;
+using DG.Tweening;
+using Player;
 using UnityEngine;
 
 public class ExplodingEnemy : MonoBehaviour, IEnemy
@@ -5,10 +8,11 @@ public class ExplodingEnemy : MonoBehaviour, IEnemy
     public int damage { get; } = 20;
     public int health { get; set; } = 50;
     public float moveSpeed = 5f;
-    public float explosionRange = 3f;
+    public float explosionRange = 2f;
     public float explosionRadius = 5f;
     public GameObject explosionPrefab;
 
+    private bool canMove;
     private Transform player;
     private Rigidbody rb;
 
@@ -16,11 +20,23 @@ public class ExplodingEnemy : MonoBehaviour, IEnemy
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody>();
+        
+        PlaySequence();
+    }
+    
+    private void PlaySequence()
+    {
+        Transform tr = transform;
+        tr.position = new Vector3(tr.position.x, tr.position.y-3f, tr.position.z);
+
+        Sequence sequence = DOTween.Sequence();;
+        sequence.Append(tr.DOMoveY(3f, 2f))
+            .OnComplete(() => canMove = true);
     }
 
     void Update()
     {
-        if (player == null) return;
+        if (player == null || !canMove) return;
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -56,15 +72,13 @@ public class ExplodingEnemy : MonoBehaviour, IEnemy
             if (hit.CompareTag("Player"))
             {
                 // Assuming the player has a method to take damage
-                //PlayerHealth playerHealth = hit.GetComponent<PlayerHealth>();
-                //if (playerHealth != null)
-               // {
-                //    playerHealth.TakeDamage(damage);
-                //}
+                if (hit.TryGetComponent(out PlayerHealth playerHealth))
+                {
+                    playerHealth.Hit(damage);
+                    Destroy(gameObject);
+                }
             }
         }
-
-        Destroy(gameObject);
     }
 
     public void Hit(int damageAmount)
@@ -83,8 +97,12 @@ public class ExplodingEnemy : MonoBehaviour, IEnemy
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         }
-
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        EnemySpawner.Instance.OnEnemyKilled(this);
         StatsManager.Instance.OnEnemyKilled?.Invoke(1);
     }
 

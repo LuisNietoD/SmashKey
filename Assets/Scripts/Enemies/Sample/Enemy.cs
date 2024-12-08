@@ -1,21 +1,50 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 using UnityEngine.Splines;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IEnemy
 {
     private SplineContainer splineContainer;
     private float movementDuration;
     private float timeElapsed = 0f;
+    private bool canMove, isOnSpline;
+
+    public int damage { get; } = 10;
+    public int health { get; set; } = 50;
+    
+    public float fireRate = 1f;
+    public GameObject bulletPrefab;
+    public Transform bulletSpawnPoint;
+    public float bulletSpeed = 5f;
+    
+    private Transform player;
+    private float nextFireTime;
 
     public void Initialize(SplineContainer spline, float duration)
     {
         splineContainer = spline;
         movementDuration = duration;
+        
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        PlaySequence();
+    }
+
+    private void PlaySequence()
+    {
+        Transform tr = transform;
+        tr.position = new Vector3(tr.position.x, tr.position.y-3f, tr.position.z);
+
+        Sequence sequence = DOTween.Sequence();;
+        sequence.Append(tr.DOMoveY(3f, 2f))
+            .OnComplete(() => canMove = true);
     }
 
     void Update()
     {
-        if (splineContainer != null)
+        if (splineContainer == null) return;
+
+        if (isOnSpline)
         {
             timeElapsed += Time.deltaTime;
             float t = Mathf.Clamp01(timeElapsed / movementDuration);
@@ -24,6 +53,50 @@ public class Enemy : MonoBehaviour
             {
                 timeElapsed = 0;
             }
+            
+            Attack();
         }
+        else if (canMove)
+        {
+            transform.DOMove(splineContainer.transform.position, 5f).OnComplete(() => isOnSpline = true);
+            canMove = false;
+        }
+    }
+    
+    public void Attack()
+    {
+        if (Time.time >= nextFireTime)
+        {
+            nextFireTime = Time.time + 1f / fireRate;
+
+            if (bulletPrefab != null && bulletSpawnPoint != null)
+            {
+                GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
+                Rigidbody rb = bullet.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    Vector3 direction = (player.position - bulletSpawnPoint.position).normalized;
+                    rb.linearVelocity = direction * bulletSpeed;
+                }
+            }
+        }
+    }
+    
+    public void Hit(int damageAmount)
+    {
+        health -= damageAmount;
+        if (health <= 0)
+        {
+            Die();
+        }
+        StatsManager.Instance.OnEnemyDamageDealt?.Invoke(damageAmount);
+    }
+
+    private void Die()
+    {
+        EnemySpawner.Instance.OnEnemyKilled(this);
+        
+        Destroy(gameObject);
+        StatsManager.Instance.OnEnemyKilled?.Invoke(1);
     }
 }

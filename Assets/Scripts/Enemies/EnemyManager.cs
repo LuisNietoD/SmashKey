@@ -1,23 +1,60 @@
+using System.Collections;
 using System.Collections.Generic;
+using LTX.Singletons;
 using UnityEngine;
 using UnityEngine.Splines;
 
-public class EnemyManager : MonoBehaviour
+public class EnemySpawner : MonoSingleton<EnemySpawner>
 {
-    [SerializeField] private SplineContainer spline;
-    public List<GameObject> enemies = new List<GameObject>();
-    public float spawnRate;
-    
-    private void Start()
+    public GameObject[] enemies;
+    public SplineContainer splineContainer; // Reference to the spline
+    public Transform spawnPoint;
+    public float spawnDelay = 1f;
+    public int enemiesPerWave = 5;
+    public float movementDuration = 5f;
+    private List<IEnemy> spawnedEnemies;
+
+    void Start()
     {
-        InvokeRepeating(nameof(SpawnEnemy), 1f, spawnRate);
+        spawnedEnemies = new List<IEnemy>();
+        StartCoroutine(SpawnWave());
     }
 
-    private void SpawnEnemy()
+    IEnumerator SpawnWave()
     {
-        int index = Random.Range(0, enemies.Count);
+        while (true)
+        {
+            Debug.Log($"Enemies : {spawnedEnemies}, {spawnedEnemies.Count}");
+            
+            while(spawnedEnemies.Count > 0)
+                yield return null;
+            
+            for (int i = 0; i < enemiesPerWave; i++)
+            {
+                SpawnEnemy();
+                yield return new WaitForSeconds(spawnDelay);
+            }
 
-        Instantiate(enemies[index]);
-        StatsManager.Instance.OnEnemySpawned?.Invoke(1);
+            yield return new WaitForSeconds(10f); // Delay between waves
+        }
+    }
+
+    void SpawnEnemy()
+    {
+        if (enemies != null && splineContainer != null)
+        {
+            GameObject enemy = Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPoint.position, Quaternion.identity);
+            spawnedEnemies.Add(enemy.GetComponent<IEnemy>());
+            
+            if (enemy.TryGetComponent(out Enemy enemyScript))
+            {
+                enemyScript.Initialize(splineContainer, movementDuration);
+            }
+        }
+    }
+
+    public void OnEnemyKilled(IEnemy enemy)
+    {
+        spawnedEnemies.Remove(enemy);
     }
 }
