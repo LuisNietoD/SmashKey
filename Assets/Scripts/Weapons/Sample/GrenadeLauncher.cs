@@ -12,6 +12,7 @@ public class GrenadeLauncher : MonoBehaviour, IWeapon
     public float explosionRadius = 5f;
     public float launchForce = 10f;
     public float launchAngle = 45f;
+    public float yExplode = 45f;
     
     private void Update()
     {
@@ -46,13 +47,13 @@ public class GrenadeLauncher : MonoBehaviour, IWeapon
         if (rb != null)
         {
             Vector3 randomDirection = Quaternion.Euler(-launchAngle, Random.Range(-30f, 30f), 0) * launchPoint.forward;
-            rb.AddForce(randomDirection * launchForce, ForceMode.Impulse);
+            rb.AddForce(randomDirection * (launchForce + Random.Range(-2, 2)) , ForceMode.Impulse);
         }
 
         Grenade grenadeScript = grenade.GetComponent<Grenade>();
         if (grenadeScript != null)
         {
-            grenadeScript.Initialize(explosionDelay, explosionRadius);
+            grenadeScript.Initialize(yExplode, explosionRadius);
         }
     }
 }

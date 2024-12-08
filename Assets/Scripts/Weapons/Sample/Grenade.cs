@@ -1,23 +1,33 @@
+using System;
 using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
     public GameObject explosionPrefab;
-    private float explosionDelay;
     private float explosionRadius;
+    private float yExplosion;
 
     public void Initialize(float delay, float radius)
     {
-        explosionDelay = delay;
+        yExplosion = delay;
         explosionRadius = radius;
-        Invoke(nameof(Explode), explosionDelay);
+        //Invoke(nameof(Explode), explosionDelay);
+    }
+
+    private void Update()
+    {
+        if (transform.position.y <= yExplosion)
+        {
+            Explode();
+        }
     }
 
     private void Explode()
     {
         if (explosionPrefab != null)
         {
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            explosion.GetComponent<Rigidbody>().linearVelocity = new Vector3(0, 0, GameMetrics.Global.platformTravelTime);
         }
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
@@ -28,7 +38,7 @@ public class Grenade : MonoBehaviour
             if (rb != null)
             {
                 Vector3 explosionDirection = (rb.transform.position - transform.position).normalized;
-                rb.AddForce(explosionDirection * 10f, ForceMode.Impulse);
+                //rb.AddForce(explosionDirection * 10f, ForceMode.Impulse);
             }
         }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6586710520188114855}
   - component: {fileID: 7248524061025075124}
   - component: {fileID: 3828528865213553307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ExplodingEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4146907329445950522}
   - component: {fileID: 7105029415612255410}
   - component: {fileID: 6568367234062159688}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
