@@ -51,7 +51,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Distance: 3.65
+    - _Distance: 1.89
     - _FoamAmount: 1
     - _FoamCutOff: 1
     - _FoamScale: 200
@@ -62,8 +62,8 @@ Material:
     - _RefractionSpeed: 0.05
     - _RefractionStrengh: 0.55
     m_Colors:
-    - _DeepColor: {r: 0, g: 0.23921582, b: 1, a: 0.19607843}
+    - _DeepColor: {r: 0, g: 0.23921576, b: 1, a: 0.57254905}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SurfaceColor: {r: 0, g: 0.8639455, b: 1, a: 0.2901961}
+    - _SurfaceColor: {r: 0, g: 0.8639455, b: 1, a: 0.49019608}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
