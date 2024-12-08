@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using DG.Tweening;
 using LootLocker.Requests;
 using TMPro;
 using UnityEngine;
@@ -7,28 +9,55 @@ namespace Stats
 {
     public class LeaderBoard : MonoBehaviour
     {
+        [SerializeField] private List<GameObject> allPanels;
+
         [SerializeField] private TMP_Text[] names, scores;
+        [SerializeField] private TMP_Text playerScore;
         
-        [SerializeField] private TMP_InputField playerName, playerScore;
+        [SerializeField] private TMP_InputField playerName;
         private bool isDone;
 
         private void OnEnable()
         {
+            foreach (GameObject panel in allPanels)
+            {
+                panel.gameObject.SetActive(false);
+            }
+            
             for (int i = 0; i < names.Length; i++)
             {
                 names[i].text = "";
                 scores[i].text = "";
             }
-        }
 
-        public void OnSubmitScore(int score)
-        {
-            StartCoroutine(SubmitScore(score));
-        }
-
-        public void OnRefreshLB()
-        {
+            playerScore.text = StatsManager.Instance.WorldStats.totalDistanceTravelled.ToString();
             StartCoroutine(RefreshLeaderboard());
+            StartCoroutine(DisplayElementsSequentially());
+        }
+        
+        private IEnumerator DisplayElementsSequentially()
+        {
+            foreach (GameObject element in allPanels)
+            {
+                element.gameObject.SetActive(true);
+            
+                DisplayElementEffect(element.gameObject);
+            
+                yield return new WaitForSeconds(0.2f);
+            }
+        }
+
+        private void DisplayElementEffect(GameObject uiElement)
+        {
+            Sequence sequence = DOTween.Sequence();
+            sequence.Append(uiElement.transform.DOScale(1.2f, 0.1f))
+                .Append(uiElement.transform.DOScale(0.8f, 0.1f))
+                .Append(uiElement.transform.DOScale(1f, 0.1f));
+        }
+
+        public void OnSubmitScore()
+        {
+            StartCoroutine(SubmitScore());
         }
         
         IEnumerator StartSession()
@@ -79,7 +108,7 @@ namespace Stats
             isDone = true;
         }
         
-        private IEnumerator SubmitScore(int score)
+        private IEnumerator SubmitScore()
         {
             StartCoroutine(StartSession());
             yield return new WaitWhile(() => isDone == false);
@@ -87,7 +116,7 @@ namespace Stats
             bool done = false;
             string leaderboardKey = GameController.Metrics.LeaderboardID;
             
-            LootLockerSDKManager.SubmitScore("", int.Parse(playerScore.text), leaderboardKey, (response) =>
+            LootLockerSDKManager.SubmitScore("", StatsManager.Instance.WorldStats.totalDistanceTravelled, leaderboardKey, (response) =>
             {
                 if (!response.success)
                 {
@@ -108,6 +137,9 @@ namespace Stats
         
         private IEnumerator RefreshLeaderboard()
         {
+            StartCoroutine(StartSession());
+            yield return new WaitWhile(() => isDone == false);
+            
             bool done = false;
             string leaderboardKey = GameController.Metrics.LeaderboardID;
             int count = scores.Length;
