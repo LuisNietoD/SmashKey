@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Project/Prefabs/BIGMushroom_1.prefab.meta
+guid: 5064630688c837842a9273f482eb87fe
+========
 guid: 972736d7cfb998c4caf4cff53e2ebc8f
+>>>>>>>> origin/GameLoop:Assets/Project/Prefabs/BasicEnemy.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
