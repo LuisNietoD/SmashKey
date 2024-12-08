@@ -61,14 +61,11 @@ Material:
     m_Floats:
     - _GradientBlack: 0
     - _GradientWhite: 0.17
-    - _Opacity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RotateTex: 90
-    - _WantAlpha: 0
     m_Colors:
-    - _MainColor: {r: 766.9962, g: 290.51627, b: 0, a: 1}
+    - _MainColor: {r: 8.000001, g: 3.0301719, b: 0, a: 1}
     - _MoveSpeed: {r: 0, g: 0, b: 0, a: 0}
-    - _ScaleTex: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
