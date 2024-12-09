@@ -26,11 +26,8 @@ public class ExplodingEnemy : MonoBehaviour, IEnemy
     
     private void PlaySequence()
     {
-        Transform tr = transform;
-        tr.position = new Vector3(tr.position.x, tr.position.y-3f, tr.position.z);
-
-        Sequence sequence = DOTween.Sequence();;
-        sequence.Append(tr.DOMoveY(3f, 2f))
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(transform.DOMoveY(1f, 2f))
             .OnComplete(() => canMove = true);
     }
     
