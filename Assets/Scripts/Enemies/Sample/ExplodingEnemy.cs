@@ -92,7 +92,7 @@ public class ExplodingEnemy : MonoBehaviour, IEnemy
                 // Assuming the player has a method to take damage
                 if (hit.TryGetComponent(out PlayerHealth playerHealth))
                 {
-                    playerHealth.Hit(damage);
+                    playerHealth.Hit(1);
                     Destroy(gameObject);
                 }
             }

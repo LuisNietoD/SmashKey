@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
             }
             else
             {
-                letterScore /= GameMetrics.Global.Multiply;
+                letterScore /= -GameMetrics.Global.Multiply;
             }
             switch (letterScore)
             {
