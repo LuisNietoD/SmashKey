@@ -21,10 +21,13 @@ public class Enemy : MonoBehaviour, IEnemy
     private Transform player;
     private float nextFireTime;
 
-    public void Initialize(SplineContainer spline, float duration)
+    public void Initialize(SplineContainer spline, float duration, int health, float fireRate)
     {
         splineContainer = spline;
         movementDuration = duration;
+
+        this.health += health;
+        this.fireRate += fireRate;
         
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -33,11 +36,8 @@ public class Enemy : MonoBehaviour, IEnemy
 
     private void PlaySequence()
     {
-        Transform tr = transform;
-        tr.position = new Vector3(tr.position.x, tr.position.y-3f, tr.position.z);
-
         Sequence sequence = DOTween.Sequence();
-        sequence.Append(tr.DOMoveY(3f, 2f))
+        sequence.Append(transform.DOMoveY(1f, 2f))
             .OnComplete(() => canMove = true);
     }
     
@@ -61,8 +61,6 @@ public class Enemy : MonoBehaviour, IEnemy
     void Update()
     {
         if (splineContainer == null || !inGame) return;
-
-        Debug.Log(isOnSpline);
         
         if (isOnSpline)
         {
@@ -78,10 +76,10 @@ public class Enemy : MonoBehaviour, IEnemy
         }
         else if (canMove)
         {
-            Vector3 direction = ((Vector3)splineContainer.EvaluatePosition(0) - transform.position).normalized;
-            rb.linearVelocity = direction * 5f + new Vector3(0f, 0f, GameController.Metrics.platformTravelTime);
+            Vector3 direction = (splineContainer.transform.GetChild(0).position - transform.position).normalized;
+            rb.linearVelocity = direction * (5f - GameController.Metrics.platformTravelTime);
 
-            if (Vector3.Distance(splineContainer.EvaluatePosition(0), transform.position) <= 5f)
+            if (Vector3.Distance(splineContainer.transform.GetChild(0).position, transform.position) <= 0.5f)
             {
                 rb.linearVelocity = Vector3.zero;
                 

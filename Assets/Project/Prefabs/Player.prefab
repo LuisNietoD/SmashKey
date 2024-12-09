@@ -253,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3179075390541811953, guid: 294e3724fbd5128409dccd268176116c, type: 3}
       propertyPath: launchForce
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3179075390541811953, guid: 294e3724fbd5128409dccd268176116c, type: 3}
       propertyPath: grenadeCount
@@ -464,6 +464,10 @@ PrefabInstance:
     - target: {fileID: 6110575379416994885, guid: b673e71f2ad3fcf4dac83ae1333ca750, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110575379416994885, guid: b673e71f2ad3fcf4dac83ae1333ca750, type: 3}
+      propertyPath: m_TagString
+      value: Laser
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
